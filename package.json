@@ -4,7 +4,7 @@
   "description": "Bluedrop's ESLint configurations",
   "main": "index.js",
   "scripts": {
-    "test": "eslint . && node test.js"
+    "test": "eslint . && node mocha.js"
   },
   "repository": {
     "type": "git",
