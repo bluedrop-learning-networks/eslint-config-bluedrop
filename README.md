@@ -1,6 +1,7 @@
 # eslint-config-bluedrop
 
 [![Dependency Status](https://david-dm.org/CoursePark/eslint-config-bluedrop.svg)](https://david-dm.org/CoursePark/eslint-config-bluedrop)
+[![Build Status](https://travis-ci.org/CoursePark/eslint-config-bluedrop?branch=master)](https://travis-ci.org/CoursePark/eslint-config-bluedrop)
 [![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)](https://raw.githubusercontent.com/CoursePark/eslint-config-bluedrop/master/LICENSE)
 
 This package provides Bluedrop's `.eslintrc` as an extensible shared config.
