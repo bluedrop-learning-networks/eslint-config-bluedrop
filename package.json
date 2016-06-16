@@ -1,0 +1,30 @@
+{
+  "name": "eslint-config-bluedrop",
+  "version": "1.0.0",
+  "description": "Bluedrop's ESLint configurations",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint . && node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoursePark/eslint-config-bluedrop.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "author": "Tim Oram <timoram@bluedrop.com>",
+  "contributors": [
+    "Tim Oram <timoram@bluedrop.com>"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoursePark/eslint-config-bluedrop/issues"
+  },
+  "homepage": "https://github.com/CoursePark/eslint-config-bluedrop#readme",
+  "devDependencies": {
+    "eslint": "^2.12.0",
+    "eslint-plugin-strict-newline": "^1.0.0"
+  }
+}
