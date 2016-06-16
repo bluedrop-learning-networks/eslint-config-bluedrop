@@ -1,1 +1,3 @@
 .eslintrc
+eslint-config-bluedrop-*.tgz
+.travis.yml
