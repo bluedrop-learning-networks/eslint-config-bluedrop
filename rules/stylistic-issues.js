@@ -56,7 +56,10 @@ module.exports = {
 		'new-parens': 'error',
 		'newline-after-var': 'off',
 		'newline-before-return': 'off',
-		'newline-per-chained-call': 'error',
+		'newline-per-chained-call': [
+			'error',
+			{ignoreChainWithDepth: 4}
+		],
 		'no-array-constructor': 'error',
 		'no-bitwise': 'error',
 		'no-continue': 'off',
