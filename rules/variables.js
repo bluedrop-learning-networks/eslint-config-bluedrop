@@ -16,4 +16,3 @@ module.exports = {
 		'no-use-before-define': 'error'
 	}
 };
-

@@ -76,7 +76,14 @@ module.exports = {
 			'error',
 			'smart-tabs'
 		],
-		'no-multiple-empty-lines': 'error',
+		'no-multiple-empty-lines': [
+			'error',
+			{
+				max: 1,
+				maxEOF: 0,
+				maxBOF: 0
+			}
+		],
 		'no-negated-condition': 'error',
 		'no-nested-ternary': 'error',
 		'no-new-object': 'error',
