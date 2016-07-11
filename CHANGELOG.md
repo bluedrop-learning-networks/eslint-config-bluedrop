@@ -6,6 +6,8 @@ The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 ## [Unreleased]
 ### Changed
 - Allow `allowShortCircuit` and `allowTernary` for `no-unused-expressions`
+### Added
+- Added `max-len` rule
 
 ## [1.1.0] - 2016-06-17
 ### Changed

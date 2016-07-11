@@ -47,7 +47,14 @@ module.exports = {
 		'linebreak-style': 'error',
 		'lines-around-comment': 'off',
 		'max-depth': 'error',
-		'max-len': 'off',
+		'max-len': [
+			'error',
+			{
+				code: 120,
+				ignoreTrailingComments: true,
+				ignoreUrls: true
+			}
+		],
 		'max-nested-callbacks': 'off',
 		'max-params': 'off',
 		'max-statements': 'off',
