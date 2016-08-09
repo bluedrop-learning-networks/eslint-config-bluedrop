@@ -1,9 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
-This project adheres to [Semantic Versioning](http://semver.org/).
-The format conforms to [Keep a Changelog](http://keepachangelog.com/).
+
+The format is based on [Keep a Changelog](http://keepachangelog.com/)
+and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+
+## [2.0.0] - 2016-08-09
 ### Added
 - Added `max-len` rule
 - Added `max: 1`, `maxEOF: 0` and `maxBOF: 0` to `no-multiple-empty-lines`
@@ -19,5 +22,6 @@ The format conforms to [Keep a Changelog](http://keepachangelog.com/).
 ### Added
 - Initial rule set
 
-[Unreleased]: https://github.com/CoursePark/NestHydrationJS/compare/v1.1.0...HEAD
+[Unreleased]: https://github.com/CoursePark/NestHydrationJS/compare/v2.0.0...HEAD
+[2.0.0]: https://github.com/CoursePark/NestHydrationJS/compare/v1.1.0...2.0.0
 [1.1.0]: https://github.com/CoursePark/NestHydrationJS/compare/v1.0.0...v1.1.0
