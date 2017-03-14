@@ -4,7 +4,7 @@ module.exports = {
 	rules: {
 		'init-declarations': 'off',
 		'no-catch-shadow': 'off',
-		'no-delete-var': 'error',
+		'no-delete-var': 'off',
 		'no-label-var': 'error',
 		'no-restricted-globals': 'off',
 		'no-shadow': 'error',
@@ -13,6 +13,6 @@ module.exports = {
 		'no-undef-init': 'error',
 		'no-undefined': 'off',
 		'no-unused-vars': 'error',
-		'no-use-before-define': 'error'
-	}
+		'no-use-before-define': 'error',
+	},
 };

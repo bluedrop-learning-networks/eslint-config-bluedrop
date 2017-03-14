@@ -2,7 +2,8 @@
 
 module.exports = {
 	rules: {
-		'comma-dangle': 'error',
+		'no-await-in-loop': 'error',
+		'no-compare-neg-zero': 'error',
 		'no-cond-assign': 'error',
 		'no-console': 'error',
 		'no-constant-condition': 'error',
@@ -15,21 +16,30 @@ module.exports = {
 		'no-empty-character-class': 'error',
 		'no-ex-assign': 'error',
 		'no-extra-boolean-cast': 'error',
-		'no-extra-parens': 'error',
+		'no-extra-parens': [
+			'error',
+			'all',
+			{
+				nestedBinaryExpressions: false,
+				ignoreJSX: 'multi-line',
+			}
+		],
 		'no-extra-semi': 'error',
 		'no-func-assign': 'error',
 		'no-inner-declarations': 'error',
 		'no-invalid-regexp': 'error',
 		'no-irregular-whitespace': 'error',
-		'no-negated-in-lhs': 'error',
 		'no-obj-calls': 'error',
+		'no-prototype-builtins': 'off',
 		'no-regex-spaces': 'error',
 		'no-sparse-arrays': 'error',
+		'no-template-curly-in-string': 'error',
 		'no-unexpected-multiline': 'error',
 		'no-unreachable': 'error',
 		'no-unsafe-finally': 'error',
+		'no-unsafe-negation': 'error',
 		'use-isnan': 'error',
 		'valid-jsdoc': 'warn',
-		'valid-typeof': 'error'
-	}
+		'valid-typeof': 'error',
+	},
 };

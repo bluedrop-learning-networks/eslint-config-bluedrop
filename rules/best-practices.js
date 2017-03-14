@@ -5,23 +5,29 @@ module.exports = {
 		'accessor-pairs': 'off',
 		'array-callback-return': 'error',
 		'block-scoped-var': 'error',
+		'class-methods-use-this': 'error',
 		complexity: 'off',
 		'consistent-return': 'error',
 		curly: 'error',
 		'default-case': 'error',
 		'dot-location': [
 			'error',
-			'property'
+			'property',
 		],
-		'dot-notation': 'error',
+		'dot-notation': [
+			'error',
+			{
+				allowPattern: '^[a-z]+(_[a-z]+)+$',
+			},
+		],
 		eqeqeq: 'error',
 		'guard-for-in': 'off',
-		'no-alert': 'off',
+		'no-alert': 'error',
 		'no-caller': 'error',
 		'no-case-declarations': 'error',
 		'no-div-regex': 'error',
 		'no-else-return': 'error',
-		'no-empty-function': 'error',
+		'no-empty-function': 'off',
 		'no-empty-pattern': 'error',
 		'no-eq-null': 'off',
 		'no-eval': 'error',
@@ -30,24 +36,24 @@ module.exports = {
 		'no-extra-label': 'error',
 		'no-fallthrough': 'error',
 		'no-floating-decimal': 'error',
-		'no-implicit-coercion': 'off',
+		'no-global-assign': 'error',
+		'no-implicit-coercion': 'error',
 		'no-implicit-globals': 'error',
-		'no-implied-eval': 'off',
+		'no-implied-eval': 'error',
 		'no-invalid-this': 'error',
-		'no-iterator': 'off',
+		'no-iterator': 'error',
 		'no-labels': [
 			'error',
 			{
 				allowLoop: true,
-				allowSwitch: true
-			}
+				allowSwitch: true,
+			},
 		],
-		'no-lone-blocks': 'off',
+		'no-lone-blocks': 'error',
 		'no-loop-func': 'error',
 		'no-magic-numbers': 'off',
 		'no-multi-spaces': 'error',
 		'no-multi-str': 'error',
-		'no-native-reassign': 'error',
 		'no-new': 'error',
 		'no-new-func': 'error',
 		'no-new-wrappers': 'error',
@@ -56,13 +62,21 @@ module.exports = {
 		'no-param-reassign': [
 			'error',
 			{
-				props: true
-			}
+				props: false,
+			},
 		],
 		'no-proto': 'error',
 		'no-redeclare': 'error',
+		'no-restricted-properties': [
+			'error',
+			{
+				object: '_',
+				message: 'Please import lodash methods individually using per method packages: https://www.npmjs.com/browse/keyword/lodash-modularized',
+			},
+		],
 		'no-return-assign': 'error',
-		'no-script-url': 'off',
+		'no-return-await': 'error',
+		'no-script-url': 'error',
 		'no-self-assign': 'error',
 		'no-self-compare': 'error',
 		'no-sequences': 'error',
@@ -72,19 +86,22 @@ module.exports = {
 			'error',
 			{
 				allowShortCircuit: true,
-				allowTernary: true
-			}
+				allowTernary: true,
+			},
 		],
 		'no-unused-labels': 'error',
 		'no-useless-call': 'error',
 		'no-useless-concat': 'error',
 		'no-useless-escape': 'error',
+		'no-useless-return': 'error',
 		'no-void': 'error',
 		'no-warning-comments': 'warn',
 		'no-with': 'error',
+		'prefer-promise-reject-errors': 'error',
 		radix: 'error',
+		'require-await': 'error',
 		'vars-on-top': 'error',
 		'wrap-iife': 'error',
-		yoda: 'off'
-	}
+		yoda: 'off',
+	},
 };
