@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.0.0-pre.1] - 2017-03-23
+### Added
+- React/JSX support
+- Jest support
+- Promise support
+- Filename support
+- Security support
+- Babel support
+### Changed
+- Added better mocha support
+### Removed
+- Custom plugins
+
 ## [2.0.0] - 2016-08-09
 ### Added
 - Added `max-len` rule
