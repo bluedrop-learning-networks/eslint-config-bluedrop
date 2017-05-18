@@ -1,19 +1,23 @@
 'use strict';
 
 module.exports = {
+	plugins: [
+		'mocha',
+	],
 	env: {
-		mocha: true
+		mocha: true,
 	},
 	extends: [
-		'./index'
+		'./index',
+		'./rules/plugin-mocha',
 	].map(require.resolve),
 	globals: {
-		expect: true
+		expect: true,
 	},
 	rules: {
 		// mocha doesn't really support arrow functions
 		'prefer-arrow-callback': 'off',
 		// chai uses what appears to be unused expressions
-		'no-unused-expressions': 'off'
-	}
+		'no-unused-expressions': 'off',
+	},
 };

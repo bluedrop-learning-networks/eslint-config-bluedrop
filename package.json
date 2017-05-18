@@ -1,10 +1,11 @@
 {
   "name": "eslint-config-bluedrop",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Bluedrop's ESLint configurations",
   "main": "index.js",
   "scripts": {
-    "test": "eslint . && node mocha.js"
+    "eslint": "eslint",
+    "test": "scripts/test.sh"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,14 @@
   },
   "homepage": "https://github.com/CoursePark/eslint-config-bluedrop#readme",
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "eslint": "^3.2.2",
-    "eslint-plugin-strict-newline": "^1.0.0"
+    "eslint-plugin-babel": "^4.1.1",
+    "eslint-plugin-filenames": "^1.1.0",
+    "eslint-plugin-jest": "^19.0.1",
+    "eslint-plugin-mocha": "^4.9.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.10.3",
+    "eslint-plugin-security": "^1.3.0"
   }
 }
