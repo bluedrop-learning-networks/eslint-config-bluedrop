@@ -11,4 +11,10 @@ module.exports = {
 		'./index',
 		'./rules/plugin-jest',
 	].map(require.resolve),
+	rules: {
+		'filenames/match-regex': [
+			'error',
+			/^[A-Za-z0-9.-]+$/,
+		],
+	},
 };
