@@ -6,3 +6,11 @@ branches:
 node_js:
   - "6"
 script: npm run test
+deploy:
+  provider: npm
+  email: dev@coursepark.com
+  api_key:
+    secure: efu0hZDizmzEb1rYxzIPemErHafTBoSZl2Df4cUMJBdFbLxj8IsE/iVwMPsFIOBLh8gOzAXRQRNkKNUQVrdJzcC1SzZNvKtrMqA9snue6CXxi9LnIYwrr3GRQX1cGM5SQtIdV/iSuH5eaOXTuFMjX2D0wajVI94AzYQbTquH4HQiQ4wfdcSMJzURTrAkCmPo/cdt+4KaakdQNhMEtTPyq03vzVt/+u2gdqBldyayfsxLfLwTEp49XnEpTCNj9DmcWPGiYdu2N5yp9+XrLTjsL75ehIr7XsO4lWzy9SIQXN8zWyN9iLnn++iCcanzUV9KNQ0V16N3Nnhx3GSHtIg0Fimh4BzjKsR5I+hHd/Hvlzpj6md9kEu2hlbRJZCK48wrxCEU9F8HTHKY3nhgloEvwTZ5DvvH5cZgK/bPJywgXhRNcV//eQTvYE++EtcvRHsfBoRmznZbhZgIPho1R9y9kgxuY9HTLLKJBawG9E4iuH+monngqgHztbecXQ+D3aW+CAiqmRG6eccNpOQ0ReBBFJ7oOyZSLRBGlr8sNj+zkCdPvOG3GZBq8EU4HECjf3aqNfkqrub2HwxcvTt9NZXPNLKYUAbvTWKlQ/eB2cjP9qhQCmf2Pg9KhthdbwFpCtXuNpjX2t+TZYAdNCePrOeYebEFWnjgyq3wGrEQ/pnlvuw=
+  on:
+    tags: true
+    repo: CoursePark/eslint-config-bluedrop
