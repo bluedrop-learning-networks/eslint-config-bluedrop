@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.1.0] - 2017-09-14
+### Changed
+- Don't enforce valid JSDoc comments (disabled `valid-jsdoc`)
+- Apply the same filename rules to Jest as we do React
+
 ## [3.0.0] - 2017-05-18
 ### Added
 - React/JSX support
@@ -35,6 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial rule set
 
-[Unreleased]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.0.0...HEAD
+[Unreleased]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.1.0...HEAD
+[3.1.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v2.0.0...v3.0.0
 [2.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v1.0.0...2.0.0
