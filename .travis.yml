@@ -1,11 +1,7 @@
 sudo: false
 language: node_js
-branches:
-  only:
-    - master
 node_js:
   - "6"
-script: npm run test
 deploy:
   provider: npm
   email: dev@coursepark.com
