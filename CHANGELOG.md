@@ -6,7 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## [3.0.0-pre.1] - 2017-03-23
+## [3.1.0] - 2017-09-14
+### Changed
+- Don't enforce valid JSDoc comments (disabled `valid-jsdoc`)
+- Apply the same filename rules to Jest as we do React
+
+## [3.0.0] - 2017-05-18
 ### Added
 - React/JSX support
 - Jest support
@@ -26,7 +31,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Allow `allowShortCircuit` and `allowTernary` for `no-unused-expressions`
 
-## [1.1.0] - 2016-06-17
+## 1.1.0 - 2016-06-17
 ### Changed
 - Turned arrow-body-style to off
 - Bumped newline-per-chained-call chain depth to 4
@@ -35,6 +40,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial rule set
 
-[Unreleased]: https://github.com/CoursePark/NestHydrationJS/compare/v2.0.0...HEAD
-[2.0.0]: https://github.com/CoursePark/NestHydrationJS/compare/v1.1.0...2.0.0
-[1.1.0]: https://github.com/CoursePark/NestHydrationJS/compare/v1.0.0...v1.1.0
+[Unreleased]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.1.0...HEAD
+[3.1.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.0.0...v3.1.0
+[3.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v2.0.0...v3.0.0
+[2.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v1.0.0...2.0.0
