@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
-## [3.0.0-pre.1] - 2017-03-23
+## [3.0.0] - 2017-05-18
 ### Added
 - React/JSX support
 - Jest support
