@@ -18,7 +18,7 @@ We export two ESLint configurations for your usage.
 
 Our default export contains all of our ESLint rules, including ECMAScript 6+.
 
-1. add `"extends": "bluedrop"` to your ESLint config file
+1. Add `"extends": "bluedrop"` to your ESLint config file
 
 ### eslint-config-bluedrop/jest
 
@@ -26,7 +26,7 @@ An extension of `eslint-config-bluedrop` that adds support for Jest.
 
 1. Ensure you have installed the dependencies from General Setup
 1. `npm install --save-dev eslint-plugin-jest`
-1. add `"extends": "bluedrop/jest"` to your ESLint config file
+1. Add `"extends": "bluedrop/jest"` to your ESLint config file
 
 ### eslint-config-bluedrop/mocha
 
@@ -34,14 +34,14 @@ An extension of `eslint-config-bluedrop` that adds support for Mocha.
 
 1. Ensure you have installed the dependencies from General Setup
 1. `npm install --save-dev eslint-plugin-mocha`
-1. add `"extends": "bluedrop/mocha"` to your ESLint config file
+1. Add `"extends": "bluedrop/mocha"` to your ESLint config file
 
 ### eslint-config-bluedrop/node
 
 An extension of `eslint-config-bluedrop` that adds support for Node.
 
 1. Ensure you have installed the dependencies from General Setup
-1. add `"extends": "bluedrop/node"` to your ESLint config file
+1. Add `"extends": "bluedrop/node"` to your ESLint config file
 
 ### eslint-config-bluedrop/react
 
@@ -49,7 +49,7 @@ An extension of `eslint-config-bluedrop` that adds support for mocha.
 
 1. Ensure you have installed the dependencies from General Setup
 1. `npm install --save-dev eslint-plugin-react`
-1. add `"extends": "bluedrop/react"` to your ESLint config file
+1. Add `"extends": "bluedrop/react"` to your ESLint config file
 
 ### eslint-config-bluedrop/babel
 
@@ -57,21 +57,21 @@ An extension of `eslint-config-bluedrop` that adds support for eslint-babel.
 
 1. Ensure you have installed the dependencies from General Setup
 1. `npm install --save-dev eslint-plugin-babel`
-1. add `"extends": "bluedrop/babel"` to your ESLint config file
+1. Add `"extends": "bluedrop/babel"` to your ESLint config file
 
 ### eslint-config-bluedrop/ecmascript-7
 
-An extension of `eslint-config-bluedrop` that adds support for ecmascript 7.
+An extension of `eslint-config-bluedrop` that adds support for ECMAScript 7.
 
 1. Ensure you have installed the dependencies from General Setup
-1. add `"extends": "bluedrop/ecmascript-7"` to your ESLint config file
+1. Add `"extends": "bluedrop/ecmascript-7"` to your ESLint config file
 
 ### eslint-config-bluedrop/ecmascript-8
 
-An extension of `eslint-config-bluedrop` that adds support for ecmascript 8. 
+An extension of `eslint-config-bluedrop` that adds support for ECMAScript 8.
 
 1. Ensure you have installed the dependencies from General Setup
-1. add `"extends": "bluedrop/ecmascript-8"` to your ESLint config file
+1. Add `"extends": "bluedrop/ecmascript-8"` to your ESLint config file
 
 ## Contributing
 
