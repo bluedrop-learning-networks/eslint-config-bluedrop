@@ -73,6 +73,12 @@ An extension of `eslint-config-bluedrop` that adds support for ECMAScript 8.
 1. Ensure you have installed the dependencies from General Setup
 1. Add `"extends": "bluedrop/ecmascript-8"` to your ESLint config file
 
+## Versioning
+
+This project follows [Semantic Versioning](http://semver.org/) as closely as possible. A MAJOR change would be caused
+by including a rule that could cause a passing code base to fail. A MINOR change is a modification or removal of a rule
+that would not cause existing passing code to fail. A PATCH would be any fix that doesn't cause any changes to rules.
+
 ## Contributing
 
 Add new rule definitions under the files located in `rules` ensuring to keep the rule correctly categorized and in the
