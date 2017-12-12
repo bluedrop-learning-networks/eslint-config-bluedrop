@@ -4,6 +4,7 @@ notifications:
   email: false
 node_js:
   - "6"
+  - "8"
 deploy:
   provider: npm
   email: dev@coursepark.com
