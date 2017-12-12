@@ -59,6 +59,20 @@ An extension of `eslint-config-bluedrop` that adds support for eslint-babel.
 1. `npm install --save-dev eslint-plugin-babel`
 1. add `"extends": "bluedrop/babel"` to your ESLint config file
 
+### eslint-config-bluedrop/ecmascript-7
+
+An extension of `eslint-config-bluedrop` that adds support for ecmascript 7.
+
+1. Ensure you have installed the dependencies from General Setup
+1. add `"extends": "bluedrop/ecmascript-7"` to your ESLint config file
+
+### eslint-config-bluedrop/ecmascript-8
+
+An extension of `eslint-config-bluedrop` that adds support for ecmascript 8. 
+
+1. Ensure you have installed the dependencies from General Setup
+1. add `"extends": "bluedrop/ecmascript-8"` to your ESLint config file
+
 ## Contributing
 
 Add new rule definitions under the files located in `rules` ensuring to keep the rule correctly categorized and in the
