@@ -99,7 +99,7 @@ module.exports = {
 		'no-with': 'error',
 		'prefer-promise-reject-errors': 'error',
 		radix: 'error',
-		'require-await': 'error',
+		'require-await': 'off',
 		'vars-on-top': 'error',
 		'wrap-iife': 'error',
 		yoda: 'off',
