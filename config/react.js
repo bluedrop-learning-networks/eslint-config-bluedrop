@@ -15,8 +15,7 @@ module.exports = {
 		},
 	},
 	extends: [
-		'./index',
-		'./rules/plugin-react',
+		'../rules/plugin-react',
 	].map(require.resolve),
 	rules: {
 		'class-methods-use-this': [
@@ -34,12 +33,12 @@ module.exports = {
 				],
 			},
 		],
-		"filenames/match-regex": [
+		'filenames/match-regex': [
 			'error',
 			/^[A-Za-z0-9.-]+$/,
 		],
 		'filenames/match-exported': 'error',
 		// React components often use this in a way that ESLint flags as invalid
-		'no-invalid-this': 'off'
+		'no-invalid-this': 'off',
 	},
 };

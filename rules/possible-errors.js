@@ -2,6 +2,13 @@
 
 module.exports = {
 	rules: {
+		'for-direction': 'error',
+		'getter-return': [
+			'error',
+			{
+				allowImplicit: true,
+			},
+		],
 		'no-await-in-loop': 'error',
 		'no-compare-neg-zero': 'error',
 		'no-cond-assign': 'error',
@@ -22,7 +29,7 @@ module.exports = {
 			{
 				nestedBinaryExpressions: false,
 				ignoreJSX: 'multi-line',
-			}
+			},
 		],
 		'no-extra-semi': 'error',
 		'no-func-assign': 'error',

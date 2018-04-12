@@ -8,8 +8,7 @@ module.exports = {
 		'jest/globals': true,
 	},
 	extends: [
-		'./index',
-		'./rules/plugin-jest',
+		'../rules/plugin-jest',
 	].map(require.resolve),
 	rules: {
 		'filenames/match-regex': [

@@ -5,6 +5,7 @@ module.exports = {
 		ecmaVersion: 8,
 	},
 	extends: [
-		'./rules/ecmascript-8',
+		'./ecmascript-7',
+		'../rules/ecmascript-8',
 	].map(require.resolve),
 };

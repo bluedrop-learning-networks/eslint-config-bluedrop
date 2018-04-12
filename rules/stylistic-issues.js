@@ -2,11 +2,16 @@
 
 module.exports = {
 	rules: {
+		'array-bracket-newline': [
+			'error',
+			'consistent',
+		],
 		'array-bracket-spacing': [
 			'error',
 			'never',
 			{singleValue: false},
 		],
+		'array-element-newline': 'off',
 		'block-spacing': 'error',
 		'brace-style': [
 			'error',
@@ -26,17 +31,19 @@ module.exports = {
 		'comma-style': 'error',
 		'computed-property-spacing': 'error',
 		'consistent-this': [
-			"error",
-			"self"
+			'error',
+			'self',
 		],
 		'eol-last': 'error',
 		'func-call-spacing': 'error',
 		'func-name-matching': 'off',
 		'func-names': 'off',
 		'func-style': 'off',
+		'function-paren-newline': 'off',
 		'id-blacklist': 'off',
 		'id-length': 'off',
 		'id-match': 'off',
+		'implicit-arrow-linebreak': 'error',
 		indent: [
 			'error',
 			'tab',
@@ -57,7 +64,13 @@ module.exports = {
 		'line-comment-position': 'off',
 		'linebreak-style': 'error',
 		'lines-around-comment': 'off',
-		'lines-around-directive': 'error',
+		'lines-between-class-members': [
+			'error',
+			'always',
+			{
+				exceptAfterSingleLine: true,
+			},
+		],
 		'max-depth': 'error',
 		'max-len': [
 			'error',
@@ -72,11 +85,10 @@ module.exports = {
 		'max-params': 'off',
 		'max-statements': 'off',
 		'max-statements-per-line': 'off',
+		'multiline-comment-style': 'off',
 		'multiline-ternary': 'off',
 		'new-cap': 'error',
 		'new-parens': 'error',
-		'newline-after-var': 'off',
-		'newline-before-return': 'off',
 		'newline-per-chained-call': [
 			'error',
 			{ignoreChainWithDepth: 4},
@@ -136,6 +148,11 @@ module.exports = {
 			'error',
 			'never',
 		],
+		'padding-line-between-statements': [
+			'error',
+			{blankLine: 'always', prev: 'directive', next: '*'},
+			{blankLine: 'any', prev: 'directive', next: 'directive'},
+		],
 		'quote-props': [
 			'error',
 			'as-needed',
@@ -150,6 +167,7 @@ module.exports = {
 		'require-jsdoc': 'off',
 		semi: 'error',
 		'semi-spacing': 'error',
+		'semi-style': 'off',
 		'sort-keys': 'off',
 		'sort-imports': 'off',
 		'sort-vars': 'off',
@@ -165,6 +183,7 @@ module.exports = {
 		'space-infix-ops': 'error',
 		'space-unary-ops': 'error',
 		'spaced-comment': 'error',
+		'switch-colon-spacing': 'error',
 		'template-tag-spacing': 'error',
 		'unicode-bom': 'error',
 		'wrap-regex': 'error',

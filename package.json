@@ -1,11 +1,16 @@
 {
   "name": "eslint-config-bluedrop",
-  "version": "3.3.0",
+  "version": "4.0.0",
   "description": "Bluedrop's ESLint configurations",
-  "main": "index.js",
+  "main": "config/common.js",
+  "files": [
+    "config/",
+    "rules/"
+  ],
   "scripts": {
-    "eslint": "eslint",
-    "test": "scripts/test.sh"
+    "eslint": "eslint .",
+    "test": "scripts/test.sh",
+    "find-new-rules": "eslint-find-rules --deprecated --unused ./scripts/all-combined.js"
   },
   "repository": {
     "type": "git",
@@ -26,14 +31,17 @@
   },
   "homepage": "https://github.com/CoursePark/eslint-config-bluedrop#readme",
   "devDependencies": {
-    "babel-eslint": "^7.2.3",
-    "eslint": "^3.2.2",
-    "eslint-plugin-babel": "^4.1.1",
-    "eslint-plugin-filenames": "^1.1.0",
-    "eslint-plugin-jest": "^19.0.1",
-    "eslint-plugin-mocha": "^4.9.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^6.10.3",
-    "eslint-plugin-security": "^1.3.0"
+    "babel-eslint": "^8.2.2",
+    "eslint": "^4.19.1",
+    "eslint-find-rules": "^3.2.2",
+    "eslint-plugin-babel": "^5.0.0",
+    "eslint-plugin-chai-expect": "^1.1.1",
+    "eslint-plugin-filenames": "^1.2.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-mocha": "^5.0.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-security": "^1.4.0"
   }
 }
