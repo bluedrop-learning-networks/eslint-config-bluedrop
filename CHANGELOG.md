@@ -4,7 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [4.0.0] - 2018-04-12
+### Added
+- ChaiJS support
+- Node plugin support
+- New rules since last major release
+### Changed
+- Disabled `promise/no-native`
+- `no-unused-expressions` now errors on ternary and short circuit cases
+- Disabled `filenames/match-regex` and `security/detect-non-literal-fs-filename` in mocha config
+### Removed
+- Deprecated rules
 
 ## [3.1.0] - 2017-09-14
 ### Changed
@@ -40,7 +50,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial rule set
 
-[Unreleased]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.1.0...HEAD
+[Unreleased]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v4.0.0...HEAD
+[4.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.1.0...v4.0.0
 [3.1.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v2.0.0...v3.0.0
-[2.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v1.0.0...2.0.0
+[2.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v1.0.0...v2.0.0

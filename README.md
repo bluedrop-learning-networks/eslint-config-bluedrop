@@ -4,7 +4,7 @@
 [![Build Status](https://travis-ci.org/CoursePark/eslint-config-bluedrop.svg?branch=master)](https://travis-ci.org/CoursePark/eslint-config-bluedrop)
 [![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)](https://raw.githubusercontent.com/CoursePark/eslint-config-bluedrop/master/LICENSE)
 
-This package provides Bluedrop's `.eslintrc` as an extensible shared config.
+This package provides Bluedrop's ESLint configuration as an extensible shared config.
 
 ## Usage
 
@@ -20,69 +20,103 @@ Our default export contains all of our ESLint rules, including ECMAScript 6+.
 
 1. Add `"extends": "bluedrop"` to your ESLint config file
 
-### eslint-config-bluedrop/jest
-
-An extension of `eslint-config-bluedrop` that adds support for Jest.
-
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-jest`
-1. Add `"extends": "bluedrop/jest"` to your ESLint config file
-
-### eslint-config-bluedrop/mocha
-
-An extension of `eslint-config-bluedrop` that adds support for Mocha.
-
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-mocha`
-1. Add `"extends": "bluedrop/mocha"` to your ESLint config file
-
-### eslint-config-bluedrop/node
-
-An extension of `eslint-config-bluedrop` that adds support for Node.
-
-1. Ensure you have installed the dependencies from General Setup
-1. Add `"extends": "bluedrop/node"` to your ESLint config file
-
-### eslint-config-bluedrop/react
-
-An extension of `eslint-config-bluedrop` that adds support for mocha.
-
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-react`
-1. Add `"extends": "bluedrop/react"` to your ESLint config file
-
-### eslint-config-bluedrop/babel
+### eslint-config-bluedrop/config/babel
 
 An extension of `eslint-config-bluedrop` that adds support for eslint-babel.
 
 1. Ensure you have installed the dependencies from General Setup
 1. `npm install --save-dev eslint-plugin-babel`
-1. Add `"extends": "bluedrop/babel"` to your ESLint config file
+1. Add `"extends": ["bluedrop", "bluedrop/config/babel"]` to your ESLint config file
 
-### eslint-config-bluedrop/ecmascript-7
+### eslint-config-bluedrop/config/chai
+
+An extension of `eslint-config-bluedrop` that adds support for Jest.
+
+1. Ensure you have installed the dependencies from General Setup
+1. `npm install --save-dev eslint-plugin-jest`
+1. Add `"extends": ["bluedrop", bluedrop/config/chai"]` to your ESLint config file
+
+### eslint-config-bluedrop/config/ecmascript-7
 
 An extension of `eslint-config-bluedrop` that adds support for ECMAScript 7.
 
 1. Ensure you have installed the dependencies from General Setup
-1. Add `"extends": "bluedrop/ecmascript-7"` to your ESLint config file
+1. Add `"extends": ["bluedrop", "bluedrop/config/ecmascript-7"]` to your ESLint config file
 
-### eslint-config-bluedrop/ecmascript-8
+### eslint-config-bluedrop/config/ecmascript-8
 
 An extension of `eslint-config-bluedrop` that adds support for ECMAScript 8.
 
 1. Ensure you have installed the dependencies from General Setup
-1. Add `"extends": "bluedrop/ecmascript-8"` to your ESLint config file
+1. Add `"extends": ["bluedrop", "bluedrop/config/ecmascript-8"]` to your ESLint config file
 
-## Versioning
+### eslint-config-bluedrop/config/jest
 
-This project follows [Semantic Versioning](http://semver.org/) as closely as possible. A MAJOR change would be caused
-by including a rule that could cause a passing code base to fail. A MINOR change is a modification or removal of a rule
-that would not cause existing passing code to fail. A PATCH would be any fix that doesn't cause any changes to rules.
+An extension of `eslint-config-bluedrop` that adds support for Jest.
+
+1. Ensure you have installed the dependencies from General Setup
+1. `npm install --save-dev eslint-plugin-jest`
+1. Add `"extends": ["bluedrop", bluedrop/config/jest"]` to your ESLint config file
+
+
+### eslint-config-bluedrop/config/mocha
+
+An extension of `eslint-config-bluedrop` that adds support for Mocha.
+
+1. Ensure you have installed the dependencies from General Setup
+1. `npm install --save-dev eslint-plugin-mocha`
+1. Add `"extends": ["bluedrop", "bluedrop/config/mocha"]` to your ESLint config file
+
+### eslint-config-bluedrop/config/node
+
+An extension of `eslint-config-bluedrop` that adds support for Node.
+
+1. Ensure you have installed the dependencies from General Setup
+1. `npm install --save-dev eslint-plugin-node`
+1. Add `"extends": ["bluedrop", "bluedrop/config/node"`] to your ESLint config file
+
+### eslint-config-bluedrop/config/react
+
+An extension of `eslint-config-bluedrop` that adds support for mocha.
+
+1. Ensure you have installed the dependencies from General Setup
+1. `npm install --save-dev eslint-plugin-react`
+1. Add `"extends": ["bluedrop", "bluedrop/config/react"]` to your ESLint config file
+
+## Semantic Versioning Policy
+
+`eslint-config-bluedrop` follows [semantic versioning](https://semver.org). However, due to the nature of code quality
+tools, it's not always clear when a minor or major version bump occurs. To help clarify this for everyone, we've
+defined the following semantic versioning policy for the project:
+
+* Patch release (intended to not break your lint build)
+    * A bug fix in a rule that results in ESLint reporting fewer errors.
+    * Improvements to documentation.
+    * Non-user-facing changes such as refactoring code, adding, deleting, or modifying tests, and increasing test
+      coverage.
+    * Re-releasing after a failed release (i.e., publishing a release that doesn't work for anyone).
+* Minor release (might break your lint build)
+    * A bug fix in a rule that results in ESLint reporting more errors.
+    * A new rule is created.
+    * A new configuration is added.
+    * A new option to an existing rule that does not result in ESLint reporting more errors.
+    * An existing rule is deprecated.
+* Major release (likely to break your lint build)
+
+    * Support for old Node version is dropped.
+    * Support for old ESLint version is dropped.
+    * An existing rule is changed that would report more errors.
+    * An existing rule is removed.
+    * An existing option of a rule is removed.
+    * An existing configuration is updated.
+
+According to our policy, any minor update may report more errors than the previous release (ex: from a bug fix). As
+such, we recommend using `package-lock.json` to guarantee the results of your builds.
 
 ## Contributing
 
 Add new rule definitions under the files located in `rules` ensuring to keep the rule correctly categorized and in the
-same order as defined on the [ESLint rules](http://eslint.org/docs/rules/) page.
+same order as defined on the [ESLint rules](http://eslint.org/docs/rules/) page. Add new configurations to `config`.
 
 This project self-lints and ensure that all file paths are correct. You can run these checks with the `npm run test`
 command.

@@ -2,11 +2,10 @@
 
 module.exports = {
 	plugins: [
+		'babel',
 	],
-	env: {
-		node: true,
-	},
+	parser: 'babel-eslint',
 	extends: [
-		'./index',
+		'../rules/plugin-babel',
 	].map(require.resolve),
 };
