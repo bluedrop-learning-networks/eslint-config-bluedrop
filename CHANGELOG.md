@@ -16,6 +16,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Removed
 - Deprecated rules
 
+## [3.3.0] - 2017-12-13
+### Changed
+- Disabled `require-await`
+
+## [3.2.0] - 2017-12-12
+### Added
+- Support for ECMAScript 7 & 8
+
 ## [3.1.0] - 2017-09-14
 ### Changed
 - Don't enforce valid JSDoc comments (disabled `valid-jsdoc`)
@@ -51,7 +59,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Initial rule set
 
 [Unreleased]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v4.0.0...HEAD
-[4.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.1.0...v4.0.0
+[4.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.3.0...v4.0.0
+[3.3.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.2.0...v3.3.0
+[3.2.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.1.0...v3.2.0
 [3.1.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.0.0...v3.1.0
 [3.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v2.0.0...v3.0.0
 [2.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v1.0.0...v2.0.0
