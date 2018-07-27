@@ -2,6 +2,7 @@
 
 module.exports = {
 	rules: {
+		'no-async-promise-executor': 'error',
 		'for-direction': 'error',
 		'getter-return': [
 			'error',
@@ -9,7 +10,7 @@ module.exports = {
 				allowImplicit: true,
 			},
 		],
-		'no-await-in-loop': 'error',
+		'no-await-in-loop': 'off',
 		'no-compare-neg-zero': 'error',
 		'no-cond-assign': 'error',
 		'no-console': 'error',

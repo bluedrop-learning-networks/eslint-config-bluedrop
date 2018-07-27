@@ -32,6 +32,7 @@ module.exports = {
 		'react/no-this-in-sfc': 'error',
 		'react/no-unescaped-entities': 'error',
 		'react/no-unknown-property': 'error',
+		'react/no-unsafe': 'error',
 		'react/no-unused-prop-types': 'error',
 		'react/no-unused-state': 'error',
 		'react/no-will-update-set-state': 'error',
@@ -89,6 +90,7 @@ module.exports = {
 		'react/jsx-no-undef': 'error',
 		'react/jsx-one-expression-per-line': 'off',
 		'react/jsx-pascal-case': 'error',
+		'react/jsx-props-no-multi-spaces': 'error',
 		'react/jsx-sort-default-props': [
 			'error',
 			{
