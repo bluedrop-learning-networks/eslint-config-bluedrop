@@ -11,7 +11,11 @@ module.exports = {
 		sourceType: 'module',
 		ecmaFeatures: {
 			jsx: true,
-			experimentalObjectRestSpread: true,
+		},
+	},
+	settings: {
+		react: {
+			version: '16.0',
 		},
 	},
 	extends: [
@@ -35,7 +39,7 @@ module.exports = {
 		],
 		'filenames/match-regex': [
 			'error',
-			/^[A-Za-z0-9.-]+$/,
+			/^[A-Za-z0-9.-]+$/u,
 		],
 		'filenames/match-exported': 'error',
 		// React components often use this in a way that ESLint flags as invalid

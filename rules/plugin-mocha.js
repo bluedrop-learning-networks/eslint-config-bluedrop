@@ -18,6 +18,7 @@ module.exports = {
 		'mocha/no-skipped-tests': 'error',
 		'mocha/no-synchronous-tests': 'off',
 		'mocha/no-top-level-hooks': 'error',
+		'mocha/prefer-arrow-callback': 'error',
 		'mocha/valid-suite-description': 'off',
 		'mocha/valid-test-description': 'error',
 	},

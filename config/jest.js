@@ -13,7 +13,7 @@ module.exports = {
 	rules: {
 		'filenames/match-regex': [
 			'error',
-			/^[A-Za-z0-9.-]+$/,
+			/^[A-Za-z0-9.-]+$/u,
 		],
 	},
 };
