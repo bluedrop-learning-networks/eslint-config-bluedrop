@@ -30,11 +30,18 @@ An extension of `eslint-config-bluedrop` that adds support for eslint-babel.
 
 ### eslint-config-bluedrop/config/chai
 
-An extension of `eslint-config-bluedrop` that adds support for Jest.
+An extension of `eslint-config-bluedrop` that adds support for chai.
 
 1. Ensure you have installed the dependencies from General Setup
 1. `npm install --save-dev eslint-plugin-chai-expect`
 1. Add `"extends": ["bluedrop", bluedrop/config/chai"]` to your ESLint config file
+
+### eslint-config-bluedrop/config/console
+
+An extension of `eslint-config-bluedrop` that adds support for console applications.
+
+1. Ensure you have installed the dependencies from General Setup
+1. Add `"extends": ["bluedrop", bluedrop/config/console"]` to your ESLint config file
 
 ### eslint-config-bluedrop/config/ecmascript-7
 
