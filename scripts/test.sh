@@ -17,3 +17,4 @@ npm run eslint -- -c config/node.js config/node.js "$@"
 
 # react config will fail against its self, so test against any empty file
 printf "" | npm run eslint -- --stdin -c config/react.js "$@"
+printf "" | npm run eslint -- --stdin -c config/typescript.js "$@"
