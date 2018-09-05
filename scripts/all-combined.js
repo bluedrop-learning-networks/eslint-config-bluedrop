@@ -30,6 +30,7 @@ module.exports = {
 		'../rules/plugin-promise.js',
 		'../rules/plugin-react.js',
 		'../rules/plugin-security.js',
+		'../rules/plugin-typescript.js',
 		'../rules/possible-errors.js',
 		'../rules/strict-mode.js',
 		'../rules/stylistic-issues.js',

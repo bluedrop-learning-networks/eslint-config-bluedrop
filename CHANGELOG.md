@@ -4,12 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [5.0.0] - 2018-09-04
+## [5.0.0] - 2018-09-05
 ### Added
-- Ecmascript-9 configuration
+- ECMAScript-9 configuration
 - Specifies React 16 as the default React version
 - New rules since last major release
-- Pass arguments to `npm run test` using `-- ARGUMENTS`
+- Typescript support
 
 ## [4.0.0] - 2018-04-12
 ### Added
