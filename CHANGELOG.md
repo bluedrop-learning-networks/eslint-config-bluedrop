@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Specifies React 16 as the default React version
 - New rules since last major release
 - Typescript support
+- Console application configuration
 
 ## [4.0.0] - 2018-04-12
 ### Added
