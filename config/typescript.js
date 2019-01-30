@@ -1,9 +1,9 @@
 'use strict';
 
 module.exports = {
-	parser: 'typescript-eslint-parser',
+	parser: '@typescript-eslint/parser',
 	plugins: [
-		'typescript',
+		'@typescript-eslint',
 	],
 	parserOptions: {
 		sourceType: 'module',
@@ -22,7 +22,5 @@ module.exports = {
 		// does not work as expected
 		'lines-between-class-members': 'off',
 		'no-extra-parens': 'off',
-		// typedoc is not jsdoc
-		'valid-jsdoc': 'off',
 	},
 };
