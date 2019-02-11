@@ -44,5 +44,8 @@ module.exports = {
 		'filenames/match-exported': 'error',
 		// React components often use this in a way that ESLint flags as invalid
 		'no-invalid-this': 'off',
+		'node/no-unsupported-features/es-syntax': ['error', {
+			ignores: ['modules'],
+		 }],
 	},
 };

@@ -2,6 +2,7 @@
 
 module.exports = {
 	rules: {
+		'babel/camelcase': 'error',
 		'babel/new-cap': 'error',
 		'babel/no-invalid-this': 'error',
 		'babel/no-unused-expressions': 'error',
@@ -14,5 +15,6 @@ module.exports = {
 			},
 		],
 		'babel/semi': 'error',
+		'babel/valid-typeof': 'error',
 	},
 };

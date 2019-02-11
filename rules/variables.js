@@ -6,7 +6,12 @@ module.exports = {
 		'no-delete-var': 'off',
 		'no-label-var': 'error',
 		'no-restricted-globals': 'off',
-		'no-shadow': 'error',
+		'no-shadow': [
+			'error',
+			{
+				allow: ['trx'], // shadow db transaction
+			},
+		],
 		'no-shadow-restricted-names': 'error',
 		'no-undef': 'error',
 		'no-undef-init': 'error',

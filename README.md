@@ -12,7 +12,7 @@ We export two ESLint configurations for your usage.
 
 ### General Setup
 
-1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint`
+1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint-plugin-jsdoc eslint`
 
 ### eslint-config-bluedrop
 
@@ -70,7 +70,7 @@ An extension of `eslint-config-bluedrop` that adds support for Jest.
 
 1. Ensure you have installed the dependencies from General Setup
 1. `npm install --save-dev eslint-plugin-jest`
-1. Add `"extends": ["bluedrop", bluedrop/config/jest"]` to your ESLint config file
+1. Add `"extends": ["bluedrop", "bluedrop/config/jest"]` to your ESLint config file
 
 ### eslint-config-bluedrop/config/mocha
 
@@ -101,7 +101,7 @@ An extension of `eslint-config-bluedrop` that adds support for React.
 ...
 settings: {
   react: {
-    version: '15.0',
+    version: '16.8',
   },
 }
 ...
@@ -109,10 +109,10 @@ settings: {
 
 ### `eslint-config-bluedrop/config/typescript`
 
-Adds support for `typescript-eslint-parser` and the [ESLint Typescript Plugin][eslint-plugin-typescript].
+Adds support for `typescript-eslint-parser` and the [ESLint Typescript Plugin][@typescript-eslint/eslint-plugin].
 
 1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev  babel-eslint eslint-plugin-typescript`
+1. `npm install --save-dev  babel-eslint @typescript-eslint/eslint-plugin`
 1. add `"extends": ["bluedrop", "bluedrop/config/typescript"]` to your ESLint config file
 
 ## Semantic Versioning Policy
@@ -157,4 +157,4 @@ command.
 
 This project is released under the ISC license. See [LICENSE](LICENSE).
 
-[eslint-plugin-typescript]:https://github.com/nzakas/eslint-plugin-typescript
+[@typescript-eslint/eslint-plugin]:https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin

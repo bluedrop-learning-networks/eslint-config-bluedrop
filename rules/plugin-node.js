@@ -18,6 +18,8 @@ module.exports = {
 		'node/prefer-global/url': 'off',
 		'node/prefer-global/url-search-params': 'off',
 		'node/prefer-global/process': 'error',
+		'node/prefer-global/text-encoder': 'error',
+		'node/prefer-global/text-decoder': 'error',
 		'node/shebang': 'error',
 		'node/no-deprecated-api': 'error',
 		'node/exports-style': [

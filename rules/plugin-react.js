@@ -70,6 +70,7 @@ module.exports = {
 			'error',
 			'multiline',
 		],
+		'react/jsx-fragments': ['error', 'syntax'],
 		'react/jsx-handler-names': 'off',
 		'react/jsx-indent': [
 			'error',

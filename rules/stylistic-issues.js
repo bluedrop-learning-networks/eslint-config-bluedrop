@@ -166,7 +166,6 @@ module.exports = {
 				avoidEscape: true,
 			},
 		],
-		'require-jsdoc': 'off',
 		semi: 'error',
 		'semi-spacing': 'error',
 		'semi-style': 'off',
