@@ -12,7 +12,7 @@ We export two ESLint configurations for your usage.
 
 ### General Setup
 
-1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint`
+1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint-plugin-jsdoc eslint`
 
 ### eslint-config-bluedrop
 
@@ -71,14 +71,6 @@ An extension of `eslint-config-bluedrop` that adds support for Jest.
 1. Ensure you have installed the dependencies from General Setup
 1. `npm install --save-dev eslint-plugin-jest`
 1. Add `"extends": ["bluedrop", "bluedrop/config/jest"]` to your ESLint config file
-
-### eslint-config-bluedrop/config/jsdoc
-
-An extension of `eslint-config-bluedrop` that adds support for JSDoc.
-
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-jsdoc`
-1. Add `"extends": ["bluedrop", "bluedrop/config/jsdoc"]` to your ESLint config file
 
 ### eslint-config-bluedrop/config/mocha
 

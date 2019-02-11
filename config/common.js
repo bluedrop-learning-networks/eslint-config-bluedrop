@@ -15,6 +15,7 @@ module.exports = {
 		'filenames',
 		'promise',
 		'security',
+		'jsdoc',
 	],
 	env: {
 		'shared-node-browser': true,
@@ -23,6 +24,7 @@ module.exports = {
 	extends: [
 		'../rules/best-practices',
 		'../rules/ecmascript-6',
+		'../rules/plugin-jsdoc',
 		'../rules/plugin-filenames',
 		'../rules/plugin-promise',
 		'../rules/plugin-security',
