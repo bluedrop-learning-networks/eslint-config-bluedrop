@@ -2,6 +2,12 @@
 
 module.exports = {
 	rules: {
+		'node/exports-style': [
+			'error',
+			'module.exports',
+		],
+		'node/file-extension-in-import': 'error',
+		'node/no-deprecated-api': 'error',
 		'node/no-extraneous-import': 'error',
 		'node/no-extraneous-require': 'error',
 		'node/no-missing-import': 'error',
@@ -20,11 +26,8 @@ module.exports = {
 		'node/prefer-global/process': 'error',
 		'node/prefer-global/text-encoder': 'error',
 		'node/prefer-global/text-decoder': 'error',
+		'node/prefer-promises/dns': 'error',
+		'node/prefer-promises/fs': 'error',
 		'node/shebang': 'error',
-		'node/no-deprecated-api': 'error',
-		'node/exports-style': [
-			'error',
-			'module.exports',
-		],
 	},
 };

@@ -37,6 +37,7 @@ module.exports = {
 		'react/no-unused-state': 'error',
 		'react/no-will-update-set-state': 'error',
 		'react/prefer-es6-class': 'error',
+		'react/prefer-read-only-props': 'off',
 		'react/prefer-stateless-function': [
 			'error',
 			{
@@ -53,6 +54,8 @@ module.exports = {
 		'react/sort-prop-types': 'error',
 		'react/sort-prop-object': 'off',
 		'react/style-prop-object': 'error',
+		'react/state-in-constructor': ['error', 'always'],
+		'react/static-property-placement': 'error',
 		'react/void-dom-elements-no-children': 'error',
 		// JSX-specific rules
 		'react/jsx-boolean-value': 'error',
@@ -64,6 +67,7 @@ module.exports = {
 			'never',
 		],
 		'react/jsx-curly-spacing': 'error',
+		'react/jsx-curly-newline': ['error', 'consistent'],
 		'react/jsx-equals-spacing': 'error',
 		'react/jsx-filename-extension': 'off',
 		'react/jsx-first-prop-new-line': [
@@ -92,6 +96,7 @@ module.exports = {
 		'react/jsx-one-expression-per-line': 'off',
 		'react/jsx-pascal-case': 'error',
 		'react/jsx-props-no-multi-spaces': 'error',
+		'react/jsx-props-no-spreading': 'off',
 		'react/jsx-sort-default-props': [
 			'error',
 			{
