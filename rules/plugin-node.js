@@ -6,7 +6,7 @@ module.exports = {
 			'error',
 			'module.exports',
 		],
-		'node/file-extension-in-import': 'error',
+		'node/file-extension-in-import': 'off',
 		'node/no-deprecated-api': 'error',
 		'node/no-extraneous-import': 'error',
 		'node/no-extraneous-require': 'error',
