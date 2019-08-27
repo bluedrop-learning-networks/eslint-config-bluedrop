@@ -95,7 +95,7 @@ module.exports = {
 		'no-warning-comments': 'warn',
 		'no-with': 'error',
 		'prefer-promise-reject-errors': 'error',
-		'prefer-named-capture-group': 'off',
+		'prefer-named-capture-group': 'error',
 		radix: 'error',
 		'require-atomic-updates': 'error',
 		'require-await': 'off',

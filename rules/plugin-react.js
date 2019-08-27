@@ -37,7 +37,7 @@ module.exports = {
 		'react/no-unused-state': 'error',
 		'react/no-will-update-set-state': 'error',
 		'react/prefer-es6-class': 'error',
-		'react/prefer-read-only-props': 'off',
+		'react/prefer-read-only-props': 'off', // only applies to flow
 		'react/prefer-stateless-function': [
 			'error',
 			{
@@ -51,7 +51,12 @@ module.exports = {
 		'react/require-render-return': 'error',
 		'react/self-closing-comp': 'error',
 		'react/sort-comp': 'off',
-		'react/sort-prop-types': 'error',
+		'react/sort-prop-types': [
+			'error',
+			{
+				ignoreCase: true,
+			},
+		],
 		'react/sort-prop-object': 'off',
 		'react/style-prop-object': 'error',
 		'react/state-in-constructor': ['error', 'always'],

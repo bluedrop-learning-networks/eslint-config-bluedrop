@@ -5,6 +5,7 @@ notifications:
 node_js:
   - "8"
   - "10"
+  - "12"
 deploy:
   provider: npm
   email: infrastructure@bluedrop.com
