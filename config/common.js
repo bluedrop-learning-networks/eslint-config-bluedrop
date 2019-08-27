@@ -12,6 +12,7 @@ module.exports = {
 		},
 	},
 	plugins: [
+		'eslint-comments',
 		'filenames',
 		'promise',
 		'security',
@@ -24,6 +25,7 @@ module.exports = {
 	extends: [
 		'../rules/best-practices',
 		'../rules/ecmascript-6',
+		'../rules/plugin-eslint-comments',
 		'../rules/plugin-jsdoc',
 		'../rules/plugin-filenames',
 		'../rules/plugin-promise',

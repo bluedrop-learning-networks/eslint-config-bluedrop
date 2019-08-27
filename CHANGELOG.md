@@ -4,9 +4,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [7.0.0] - 2019-08-27
 ### Added
+- eslint-comments plugin added to common rule set
+- react-hooks plugin added to existing react rule set
+- New rules since last major release
 - Ignore `no-process-env` for console configuration
+### Removed
+- Drop support for node v6, following eslint
 
 ## [6.0.0] - 2019-02-11
 ### Added
