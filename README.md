@@ -12,7 +12,7 @@ We export two ESLint configurations for your usage.
 
 ### General Setup
 
-1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint-plugin-jsdoc eslint`
+1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint-plugin-jsdoc eslint-plugin-eslint-comments eslint-plugin-import eslint`
 
 ### eslint-config-bluedrop
 
@@ -93,15 +93,15 @@ An extension of `eslint-config-bluedrop` that adds support for Node.
 An extension of `eslint-config-bluedrop` that adds support for React.
 
 1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-react`
+1. `npm install --save-dev eslint-plugin-node eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks`
 1. Add `"extends": ["bluedrop", "bluedrop/config/react"]` to your ESLint config file
-1. You must also specify your react version (if it is not version 16) in your ESLint config file like so:
+1. You must also specify your react version (if it is not the latest version) in your ESLint config file like so:
 
 ```javascript
 ...
 settings: {
   react: {
-    version: '16.8',
+    version: '16.9',
   },
 }
 ...
@@ -127,14 +127,15 @@ defined the following semantic versioning policy for the project:
     * Non-user-facing changes such as refactoring code, adding, deleting, or modifying tests, and increasing test
       coverage.
     * Re-releasing after a failed release (i.e., publishing a release that doesn't work for anyone).
+
 * Minor release (might break your lint build)
     * A bug fix in a rule that results in ESLint reporting more errors.
     * A new rule is created.
     * A new configuration is added.
     * A new option to an existing rule that does not result in ESLint reporting more errors.
     * An existing rule is deprecated.
-* Major release (likely to break your lint build)
 
+* Major release (likely to break your lint build)
     * Support for old Node version is dropped.
     * Support for old ESLint version is dropped.
     * An existing rule is changed that would report more errors.

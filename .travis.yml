@@ -3,9 +3,9 @@ language: node_js
 notifications:
   email: false
 node_js:
-  - "6"
   - "8"
   - "10"
+  - "12"
 deploy:
   provider: npm
   email: infrastructure@bluedrop.com

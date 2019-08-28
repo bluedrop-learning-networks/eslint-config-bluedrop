@@ -2,7 +2,10 @@
 
 module.exports = {
 	plugins: [
+		'node',
 		'react',
+		'react-hooks',
+		'jsx-a11y',
 	],
 	env: {
 		browser: true,
@@ -15,11 +18,13 @@ module.exports = {
 	},
 	settings: {
 		react: {
-			version: '16.0',
+			version: '16.9',
 		},
 	},
 	extends: [
+		'../rules/plugin-jsx-a11y.js',
 		'../rules/plugin-react',
+		'../rules/plugin-react-hooks',
 	].map(require.resolve),
 	rules: {
 		'class-methods-use-this': [

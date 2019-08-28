@@ -4,9 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [Unreleased]
+## [7.0.0] - 2019-08-27
 ### Added
+- New rules since last major release
+- unicorn plugin added to common rule set
+- import plugin added to common rule set
+- eslint-comments plugin added to common rule set
+- react-hooks plugin added to existing react rule set
+- jsx-a11y plugin added to existing react rule set
+### Changed
 - Ignore `no-process-env` for console configuration
+- Ignore `forbid-component-props` within react configuration
+- Ignore `jsx-pascal-case` if the component is named `_T`
+### Removed
+- Drop support for node v6, following eslint
+- Remove configurations already exposed via common
 
 ## [6.0.0] - 2019-02-11
 ### Added

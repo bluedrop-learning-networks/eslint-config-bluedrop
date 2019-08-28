@@ -7,7 +7,7 @@ module.exports = {
 		'react/default-props-match-prop-types': 'error',
 		'react/destructuring-assignment': 'off',
 		'react/display-name': 'error',
-		'react/forbid-component-props': 'error',
+		'react/forbid-component-props': 'off', // allow for className
 		'react/forbid-dom-props': 'off',
 		'react/forbid-elements': 'off',
 		'react/forbid-prop-types': 'off',
@@ -37,6 +37,7 @@ module.exports = {
 		'react/no-unused-state': 'error',
 		'react/no-will-update-set-state': 'error',
 		'react/prefer-es6-class': 'error',
+		'react/prefer-read-only-props': 'off', // only applies to flow
 		'react/prefer-stateless-function': [
 			'error',
 			{
@@ -50,9 +51,16 @@ module.exports = {
 		'react/require-render-return': 'error',
 		'react/self-closing-comp': 'error',
 		'react/sort-comp': 'off',
-		'react/sort-prop-types': 'error',
+		'react/sort-prop-types': [
+			'error',
+			{
+				ignoreCase: true,
+			},
+		],
 		'react/sort-prop-object': 'off',
 		'react/style-prop-object': 'error',
+		'react/state-in-constructor': ['error', 'always'],
+		'react/static-property-placement': 'error',
 		'react/void-dom-elements-no-children': 'error',
 		// JSX-specific rules
 		'react/jsx-boolean-value': 'error',
@@ -64,6 +72,7 @@ module.exports = {
 			'never',
 		],
 		'react/jsx-curly-spacing': 'error',
+		'react/jsx-curly-newline': ['error', 'consistent'],
 		'react/jsx-equals-spacing': 'error',
 		'react/jsx-filename-extension': 'off',
 		'react/jsx-first-prop-new-line': [
@@ -90,8 +99,11 @@ module.exports = {
 		'react/jsx-no-target-blank': 'error',
 		'react/jsx-no-undef': 'error',
 		'react/jsx-one-expression-per-line': 'off',
-		'react/jsx-pascal-case': 'error',
+		'react/jsx-pascal-case': ['error', {
+			allowAllCaps: true, ignore: ['_T'],
+		}],
 		'react/jsx-props-no-multi-spaces': 'error',
+		'react/jsx-props-no-spreading': 'off',
 		'react/jsx-sort-default-props': [
 			'error',
 			{
