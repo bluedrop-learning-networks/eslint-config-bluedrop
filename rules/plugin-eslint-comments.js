@@ -13,6 +13,12 @@ module.exports = {
 		'eslint-comments/no-unlimited-disable': 'error',
 		// Stylistic Issues
 		'eslint-comments/no-restricted-disable': 'off',
-		'eslint-comments/no-use': 'off',
+		// disallow global/globals, eslint directive in comment, etc.
+		'eslint-comments/no-use': ['error', {allow: [
+			'eslint-disable',
+			'eslint-disable-line',
+			'eslint-disable-next-line',
+			'eslint-enable',
+		]}],
 	},
 };
