@@ -12,7 +12,6 @@ npm run eslint -- -c config/ecmascript-7.js config/ecmascript-7.js "$@"
 npm run eslint -- -c config/ecmascript-8.js config/ecmascript-8.js "$@"
 npm run eslint -- -c config/ecmascript-9.js config/ecmascript-9.js "$@"
 npm run eslint -- -c config/jest.js config/jest.js "$@"
-npm run eslint -- -c config/jsdoc.js config/jsdoc.js "$@"
 npm run eslint -- -c config/mocha.js config/mocha.js "$@"
 npm run eslint -- -c config/node.js config/node.js "$@"
 
