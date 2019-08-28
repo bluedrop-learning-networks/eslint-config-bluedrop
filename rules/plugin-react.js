@@ -7,7 +7,7 @@ module.exports = {
 		'react/default-props-match-prop-types': 'error',
 		'react/destructuring-assignment': 'off',
 		'react/display-name': 'error',
-		'react/forbid-component-props': 'error',
+		'react/forbid-component-props': 'off', // allow for className
 		'react/forbid-dom-props': 'off',
 		'react/forbid-elements': 'off',
 		'react/forbid-prop-types': 'off',
@@ -99,7 +99,9 @@ module.exports = {
 		'react/jsx-no-target-blank': 'error',
 		'react/jsx-no-undef': 'error',
 		'react/jsx-one-expression-per-line': 'off',
-		'react/jsx-pascal-case': 'error',
+		'react/jsx-pascal-case': ['error', {
+			allowAllCaps: true, ignore: ['_T'],
+		}],
 		'react/jsx-props-no-multi-spaces': 'error',
 		'react/jsx-props-no-spreading': 'off',
 		'react/jsx-sort-default-props': [

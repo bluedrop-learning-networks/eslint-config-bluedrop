@@ -12,7 +12,7 @@ We export two ESLint configurations for your usage.
 
 ### General Setup
 
-1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint-plugin-jsdoc eslint-plugin-eslint-comments eslint`
+1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint-plugin-jsdoc eslint-plugin-eslint-comments eslint-plugin-import eslint`
 
 ### eslint-config-bluedrop
 
@@ -93,7 +93,7 @@ An extension of `eslint-config-bluedrop` that adds support for Node.
 An extension of `eslint-config-bluedrop` that adds support for React.
 
 1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks`
+1. `npm install --save-dev eslint-plugin-node eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks`
 1. Add `"extends": ["bluedrop", "bluedrop/config/react"]` to your ESLint config file
 1. You must also specify your react version (if it is not the latest version) in your ESLint config file like so:
 
