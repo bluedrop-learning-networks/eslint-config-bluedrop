@@ -89,7 +89,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial rule set
 
-[Unreleased]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v6.0.0...HEAD
+[Unreleased]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v7.0.0...HEAD
+[7.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v6.0.0...v7.0.0
 [6.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v5.0.0...v6.0.0
 [5.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v4.0.0...v5.0.0
 [4.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.3.0...v4.0.0
