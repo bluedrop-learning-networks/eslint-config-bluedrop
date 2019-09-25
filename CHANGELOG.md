@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [7.2.0] - 2019-09-25
+### Changed
+- Disable `unicorn/prefer-node-append`, since `document.append` is not supported in ie11
+
 ## [7.1.0] - 2019-08-30
 ### Changed
 - Add `ignoreRestSiblings` and `argsIgnorePattern` for `no-unused-vars` rule
@@ -93,7 +97,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial rule set
 
-[Unreleased]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v7.1.0...HEAD
+[Unreleased]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v7.2.0...HEAD
+[7.2.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v7.1.0...v7.2.0
 [7.1.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v7.0.0...v7.1.0
 [7.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v6.0.0...v7.0.0
 [6.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v5.0.0...v6.0.0
