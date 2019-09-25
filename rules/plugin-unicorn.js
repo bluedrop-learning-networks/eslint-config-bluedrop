@@ -31,7 +31,7 @@ module.exports = {
 		'unicorn/prefer-exponentiation-operator': 'error',
 		'unicorn/prefer-flat-map': 'error',
 		'unicorn/prefer-includes': 'error',
-		'unicorn/prefer-node-append': 'error',
+		'unicorn/prefer-node-append': 'off', // append is not supported in ie11
 		'unicorn/prefer-node-remove': 'error',
 		'unicorn/prefer-query-selector': 'off',
 		'unicorn/prefer-spread': 'error',
