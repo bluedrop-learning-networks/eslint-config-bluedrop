@@ -12,7 +12,7 @@ We export two ESLint configurations for your usage.
 
 ### General Setup
 
-1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint-plugin-jsdoc eslint-plugin-eslint-comments eslint-plugin-import eslint`
+1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint-plugin-jsdoc eslint-plugin-eslint-comments eslint-plugin-import eslint eslint-plugin-unicorn`
 
 ### eslint-config-bluedrop
 
