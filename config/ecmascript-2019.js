@@ -2,10 +2,9 @@
 
 module.exports = {
 	parserOptions: {
-		ecmaVersion: 8,
+		ecmaVersion: 10,
 	},
 	extends: [
-		'./ecmascript-7',
-		'../rules/ecmascript-8',
+		'./ecmascript-2018',
 	].map(require.resolve),
 };

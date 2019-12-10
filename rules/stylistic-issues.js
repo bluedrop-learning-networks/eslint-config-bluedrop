@@ -115,7 +115,7 @@ module.exports = {
 			},
 		],
 		'no-negated-condition': 'error',
-		'no-nested-ternary': 'error',
+		'no-nested-ternary': 'off', // use unicorn/no-nested-ternary instead
 		'no-new-object': 'error',
 		'no-plusplus': 'off',
 		'no-restricted-syntax': 'off',
@@ -155,6 +155,7 @@ module.exports = {
 			{blankLine: 'always', prev: 'directive', next: '*'},
 			{blankLine: 'any', prev: 'directive', next: 'directive'},
 		],
+		'prefer-exponentiation-operator': 'error',
 		'quote-props': [
 			'error',
 			'as-needed',

@@ -43,34 +43,19 @@ An extension of `eslint-config-bluedrop` that adds support for console applicati
 1. Ensure you have installed the dependencies from General Setup
 1. Add `"extends": ["bluedrop", bluedrop/config/console"]` to your ESLint config file
 
-### eslint-config-bluedrop/config/ecmascript-7
+### eslint-config-bluedrop/config/ecmascript-2018
 
-An extension of `eslint-config-bluedrop` that adds support for ECMAScript 7.
-
-1. Ensure you have installed the dependencies from General Setup
-1. Add `"extends": ["bluedrop", "bluedrop/config/ecmascript-7"]` to your ESLint config file
-
-### eslint-config-bluedrop/config/ecmascript-8
-
-An extension of `eslint-config-bluedrop` that adds support for ECMAScript 8.
-
-1. Ensure you have installed the dependencies from General Setup
-1. Add `"extends": ["bluedrop", "bluedrop/config/ecmascript-8"]` to your ESLint config file
-
-### eslint-config-bluedrop/config/ecmascript-9
-
-An extension of `eslint-config-bluedrop` that adds support for ECMAScript 9.
+An extension of `eslint-config-bluedrop` that adds support for ECMAScript 9 - 2018.
 
 1. Ensure you have installed the dependencies from General Setup
 1. Add `"extends": ["bluedrop", "bluedrop/config/ecmascript-9"]` to your ESLint config file
 
-### eslint-config-bluedrop/config/jest
+### eslint-config-bluedrop/config/ecmascript-2019
 
-An extension of `eslint-config-bluedrop` that adds support for Jest.
+An extension of `eslint-config-bluedrop` that adds support for ECMAScript 10 - 2019.
 
 1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-jest`
-1. Add `"extends": ["bluedrop", "bluedrop/config/jest"]` to your ESLint config file
+1. Add `"extends": ["bluedrop", "bluedrop/config/ecmascript-10"]` to your ESLint config file
 
 ### eslint-config-bluedrop/config/mocha
 

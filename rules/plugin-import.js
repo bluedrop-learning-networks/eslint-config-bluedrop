@@ -34,8 +34,24 @@ module.exports = {
 		'import/exports-last': 'off',
 		'import/no-duplicates': 'error',
 		'import/no-namespace': 'off',
-		'import/extensions': 'error',
-		'import/order': 'off', // nice to have in the future
+		'import/extensions': [
+			'error',
+			{js: 'never', json: 'always'},
+		],
+		'import/order': [
+			'error',
+			{
+				groups: [
+					['parent', 'sibling', 'index'],
+					['builtin', 'external'],
+					'internal', // we do not use this, so it's not important
+				],
+				'newlines-between': 'never',
+				alphabetize: {
+					order: 'asc',
+				},
+			},
+		],
 		'import/newline-after-import': 'error',
 		'import/prefer-default-export': 'off',
 		'import/max-dependencies': 'off',
