@@ -1,8 +1,9 @@
 # eslint-config-bluedrop
 
-[![Dependency Status](https://david-dm.org/CoursePark/eslint-config-bluedrop.svg)](https://david-dm.org/CoursePark/eslint-config-bluedrop)
-[![Build Status](https://travis-ci.org/CoursePark/eslint-config-bluedrop.svg?branch=master)](https://travis-ci.org/CoursePark/eslint-config-bluedrop)
-[![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)](https://raw.githubusercontent.com/CoursePark/eslint-config-bluedrop/master/LICENSE)
+[![Dependency Status](https://david-dm.org/bluedrop-learning-networks/eslint-config-bluedrop.svg)](https://david-dm.org/bluedrop-learning-networks/eslint-config-bluedrop)
+[![Build Status](https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/workflows/Test/badge.svg)](https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/actions)
+[![Build Status](https://travis-ci.org/bluedrop-learning-networks/eslint-config-bluedrop.svg?branch=master)](https://travis-ci.org/bluedrop-learning-networks/eslint-config-bluedrop)
+[![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)](https://raw.githubusercontent.com/bluedrop-learning-networks/eslint-config-bluedrop/master/LICENSE)
 
 This package provides Bluedrop's ESLint configuration as an extensible shared config.
 

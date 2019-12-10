@@ -1,0 +1,16 @@
+name: Test
+
+on: [push]
+
+jobs:
+  build:
+    name: Node ${{ matrix.node }} build
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [ '8', '10', '12' ]
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+      - run: npm ci
+      - run: npm test
