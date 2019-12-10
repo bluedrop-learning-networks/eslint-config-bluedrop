@@ -30,7 +30,7 @@ module.exports = {
 		'unicorn/no-zero-fractions': 'off',
 		'unicorn/number-literal-case': 'off',
 		'unicorn/prefer-add-event-listener': 'error',
-		'unicorn/prefer-dataset': 'off',
+		'unicorn/prefer-dataset': 'error',
 		'unicorn/prefer-event-key': 'error',
 		'unicorn/prefer-exponentiation-operator': 'error',
 		'unicorn/prefer-flat-map': 'error',
