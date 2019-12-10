@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [8.0.0] - 2019-12-09
+### Added
+- Add config for ECMAScript 2019 (10)
+- Import/require order (`import/order`)
+
+### Changed
+- Update ESLint and all plugins to latest and configure all new rules
+- Rename ECMAScript 2018 (9) from `ecmascript-9` to `ecmascript-2018`
+- ECMAScript 2015 (6), 2016 (7) and 2017 (8) are now part of the common configuration
+- Relax extensions (`import/extensions`)
+
+### Removed
+- Configurations for ECMAScript 2015 (6), 2016 (7) and 2017 (8)
+- Jest plugin and configuration
+
 ## [7.2.0] - 2019-09-25
 ### Changed
 - Disable `unicorn/prefer-node-append`, since `document.append` is not supported in ie11

@@ -25,7 +25,15 @@ module.exports = {
 		'capitalized-comments': 'off',
 		'comma-dangle': [
 			'error',
-			'always-multiline',
+			{
+				arrays: 'always-multiline',
+				objects: 'always-multiline',
+				imports: 'always-multiline',
+				exports: 'always-multiline',
+				// breaks dynamic imports which disallow trailing comma. This setting allows but doesn't require a
+				// trailing comma on function calls
+				functions: 'only-multiline',
+			}
 		],
 		'comma-spacing': 'error',
 		'comma-style': 'error',
@@ -115,7 +123,7 @@ module.exports = {
 			},
 		],
 		'no-negated-condition': 'error',
-		'no-nested-ternary': 'error',
+		'no-nested-ternary': 'off', // use unicorn/no-nested-ternary instead
 		'no-new-object': 'error',
 		'no-plusplus': 'off',
 		'no-restricted-syntax': 'off',
@@ -155,6 +163,7 @@ module.exports = {
 			{blankLine: 'always', prev: 'directive', next: '*'},
 			{blankLine: 'any', prev: 'directive', next: 'directive'},
 		],
+		'prefer-exponentiation-operator': 'error',
 		'quote-props': [
 			'error',
 			'as-needed',

@@ -98,6 +98,7 @@ module.exports = {
 		'react/jsx-no-literals': 'off',
 		'react/jsx-no-target-blank': 'error',
 		'react/jsx-no-undef': 'error',
+		'react/jsx-no-useless-fragment': 'error',
 		'react/jsx-one-expression-per-line': 'off',
 		'react/jsx-pascal-case': ['error', {
 			allowAllCaps: true, ignore: ['_T'],

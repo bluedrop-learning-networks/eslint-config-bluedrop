@@ -26,7 +26,8 @@ module.exports = {
 	},
 	extends: [
 		'../rules/best-practices',
-		'../rules/ecmascript-6',
+		'../rules/ecmascript-2015',
+		'../rules/ecmascript-2017',
 		'../rules/plugin-eslint-comments',
 		'../rules/plugin-filenames',
 		'../rules/plugin-import',

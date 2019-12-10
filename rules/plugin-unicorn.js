@@ -5,9 +5,11 @@
 module.exports = {
 	rules: {
 		'unicorn/catch-error-name': 'off', // allow us to use err / error
+		'unicorn/consistent-function-scoping': 'off', // future, too many false positives at the moment
 		'unicorn/custom-error-definition': 'off',
 		'unicorn/error-message': 'error',
 		'unicorn/escape-case': 'off',
+		'unicorn/expiring-todo-comments': 'error',
 		'unicorn/explicit-length-check': 'off',
 		'unicorn/filename-case': 'off',
 		'unicorn/import-index': 'error',
@@ -19,6 +21,7 @@ module.exports = {
 		'unicorn/no-for-loop': 'error',
 		'unicorn/no-hex-escape': 'off',
 		'unicorn/no-keyword-prefix': 'off',
+		'unicorn/no-nested-ternary': 'error', // replaces no-nested-ternary from ESLint
 		'unicorn/no-new-buffer': 'off', // let eslint take care of this
 		'unicorn/no-process-exit': 'off', // let eslint take care of this
 		'unicorn/no-unreadable-array-destructuring': 'error',
@@ -27,15 +30,20 @@ module.exports = {
 		'unicorn/no-zero-fractions': 'off',
 		'unicorn/number-literal-case': 'off',
 		'unicorn/prefer-add-event-listener': 'error',
+		'unicorn/prefer-dataset': 'error',
 		'unicorn/prefer-event-key': 'error',
 		'unicorn/prefer-exponentiation-operator': 'error',
 		'unicorn/prefer-flat-map': 'error',
 		'unicorn/prefer-includes': 'error',
+		'unicorn/prefer-negative-index': 'error',
 		'unicorn/prefer-node-append': 'off', // append is not supported in ie11
 		'unicorn/prefer-node-remove': 'error',
 		'unicorn/prefer-query-selector': 'off',
+		'unicorn/prefer-reflect-apply': 'off',
 		'unicorn/prefer-spread': 'error',
 		'unicorn/prefer-starts-ends-with': 'error',
+		'unicorn/prefer-trim-start-end': 'error',
+		'unicorn/prefer-string-slice': 'error',
 		'unicorn/prefer-text-content': 'error',
 		'unicorn/prefer-type-error': 'off',
 		'unicorn/prevent-abbreviations': 'off', // prefers 'database' over 'db', 'fooObject' over 'fooObj'
