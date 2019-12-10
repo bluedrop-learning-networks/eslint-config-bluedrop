@@ -33,7 +33,7 @@ module.exports = {
 				// breaks dynamic imports which disallow trailing comma. This setting allows but doesn't require a
 				// trailing comma on function calls
 				functions: 'only-multiline',
-			}
+			},
 		],
 		'comma-spacing': 'error',
 		'comma-style': 'error',

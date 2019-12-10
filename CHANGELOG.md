@@ -112,15 +112,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial rule set
 
-[Unreleased]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v7.2.0...HEAD
-[7.2.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v7.1.0...v7.2.0
-[7.1.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v7.0.0...v7.1.0
-[7.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v6.0.0...v7.0.0
-[6.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v5.0.0...v6.0.0
-[5.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v4.0.0...v5.0.0
-[4.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.3.0...v4.0.0
-[3.3.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.2.0...v3.3.0
-[3.2.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.1.0...v3.2.0
-[3.1.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v3.0.0...v3.1.0
-[3.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v2.0.0...v3.0.0
-[2.0.0]: https://github.com/CoursePark/eslint-config-bluedrop/compare/v1.0.0...v2.0.0
+[Unreleased]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v8.0.0...HEAD
+[8.0.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v7.2.0...v8.0.0
+[7.2.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v7.1.0...v7.2.0
+[7.1.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v7.0.0...v7.1.0
+[7.0.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v6.0.0...v7.0.0
+[6.0.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v5.0.0...v6.0.0
+[5.0.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v4.0.0...v5.0.0
+[4.0.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v3.3.0...v4.0.0
+[3.3.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v3.2.0...v3.3.0
+[3.2.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v3.1.0...v3.2.0
+[3.1.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v3.0.0...v3.1.0
+[3.0.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v2.0.0...v3.0.0
+[2.0.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v1.0.0...v2.0.0
