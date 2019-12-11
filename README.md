@@ -1,8 +1,7 @@
 # eslint-config-bluedrop
 
-[![Dependency Status](https://david-dm.org/bluedrop-learning-networks/eslint-config-bluedrop.svg)](https://david-dm.org/bluedrop-learning-networks/eslint-config-bluedrop)
+[![Dependency Status](https://david-dm.org/bluedrop-learning-networks/eslint-config-bluedrop/dev-status.svg)](https://david-dm.org/bluedrop-learning-networks/eslint-config-bluedrop/dev-status.svg)
 [![Build Status](https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/workflows/Test/badge.svg)](https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/actions)
-[![Build Status](https://travis-ci.org/bluedrop-learning-networks/eslint-config-bluedrop.svg?branch=master)](https://travis-ci.org/bluedrop-learning-networks/eslint-config-bluedrop)
 [![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)](https://raw.githubusercontent.com/bluedrop-learning-networks/eslint-config-bluedrop/master/LICENSE)
 
 This package provides Bluedrop's ESLint configuration as an extensible shared config.
@@ -81,13 +80,13 @@ An extension of `eslint-config-bluedrop` that adds support for React.
 1. Ensure you have installed the dependencies from General Setup
 1. `npm install --save-dev eslint-plugin-node eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks`
 1. Add `"extends": ["bluedrop", "bluedrop/config/react"]` to your ESLint config file
-1. You must also specify your react version (if it is not the latest version) in your ESLint config file like so:
+1. You can also specify your react version (if it is not the latest version) in your ESLint config file like so:
 
 ```javascript
 ...
 settings: {
   react: {
-    version: '16.9',
+    version: '16.x', // defaults to 'detect'
   },
 }
 ...
