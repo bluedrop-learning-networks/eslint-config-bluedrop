@@ -2,7 +2,7 @@
 
 module.exports = {
 	parserOptions: {
-		ecmaVersion: 6,
+		ecmaVersion: 11,
 		sourceType: 'script',
 		ecmaFeatures: {
 			globalReturn: true,
@@ -27,6 +27,7 @@ module.exports = {
 		'../rules/best-practices',
 		'../rules/ecmascript-2015',
 		'../rules/ecmascript-2017',
+		'../rules/ecmascript-2018',
 		'../rules/plugin-eslint-comments',
 		'../rules/plugin-filenames',
 		'../rules/plugin-import',
