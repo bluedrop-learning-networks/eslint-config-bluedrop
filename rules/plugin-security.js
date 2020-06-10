@@ -6,7 +6,7 @@ module.exports = {
 		'security/detect-child-process': 'error',
 		'security/detect-disable-mustache-escape': 'error',
 		'security/detect-eval-with-expression': 'error',
-		'security/detect-new-buffer': 'off', // no-buffer-constructor already covers this
+		'security/detect-new-buffer': 'off', // node/no-deprecated-api already covers this
 		'security/detect-no-csrf-before-method-override': 'error',
 		'security/detect-non-literal-fs-filename': 'error',
 		'security/detect-non-literal-regexp': 'error',

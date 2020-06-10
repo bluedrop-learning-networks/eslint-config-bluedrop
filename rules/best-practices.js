@@ -3,13 +3,19 @@
 module.exports = {
 	rules: {
 		'accessor-pairs': 'off',
-		'array-callback-return': 'error',
+		'array-callback-return': [
+			'error',
+			{
+				allowImplicit: true,
+			},
+		],
 		'block-scoped-var': 'error',
 		'class-methods-use-this': 'error',
 		complexity: 'off',
 		'consistent-return': 'error',
 		curly: 'error',
 		'default-case': 'error',
+		'default-case-last': 'error',
 		'default-param-last': 'error',
 		'dot-location': [
 			'error',
