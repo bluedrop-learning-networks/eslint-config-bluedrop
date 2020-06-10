@@ -31,6 +31,7 @@ module.exports = {
 			'error',
 			{
 				exceptMethods: [
+					'componentDidCatch',
 					'componentDidMount',
 					'componentDidUpdate',
 					'componentWillMount',
@@ -42,10 +43,7 @@ module.exports = {
 				],
 			},
 		],
-		'filenames/match-regex': [
-			'error',
-			/^[A-Za-z0-9.-]+$/u,
-		],
+		'filenames/match-regex': 'off', // there are no hard rules in React projects
 		'filenames/match-exported': 'error',
 		// React components often use this in a way that ESLint flags as invalid
 		'no-invalid-this': 'off',

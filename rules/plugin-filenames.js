@@ -4,7 +4,7 @@ module.exports = {
 	rules: {
 		'filenames/match-regex': [
 			'error',
-			/^[a-z0-9.-]+$/u,
+			'^[a-z0-9.-]+$',
 			true,
 		],
 		'filenames/match-exported': 'off',
