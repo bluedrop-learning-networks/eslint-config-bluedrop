@@ -8,8 +8,6 @@ set -o pipefail
 npm run eslint -- -c config/babel.js config/babel.js "$@"
 npm run eslint -- -c config/chai.js config/chai.js "$@"
 npm run eslint -- -c config/common.js config/common.js "$@"
-npm run eslint -- -c config/ecmascript-2018.js config/ecmascript-2018.js "$@"
-npm run eslint -- -c config/ecmascript-2019.js config/ecmascript-2019.js "$@"
 npm run eslint -- -c config/mocha.js config/mocha.js "$@"
 npm run eslint -- -c config/node.js config/node.js "$@"
 
