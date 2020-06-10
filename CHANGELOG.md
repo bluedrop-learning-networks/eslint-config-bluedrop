@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [9.0.0] - 2020-06-10
+### Added
+- Support for ECMAScript 2020 (11)
+
+### Changed
+- Update ESLint and all plugins to latest and configure all new rules (breaking)
+- ECMAScript 2018 (9) and 2019 (10) are now part of the common configuration (breaking)
+- Add `dynamicImport` ignore to `node/no-unsupported-features/es-syntax` - #63
+- Disable `require-atomic-updates` rule - #62
+- Disable `security/detect-child-process` for console config
+
+### Removed
+- Configurations for ECMAScript 2018 (9) and 2019 (10)
+- JSDoc plugin and configuration
+- Typescript plugin and configuration
+
 ## [8.0.0] - 2019-12-09
 ### Added
 - Add config for ECMAScript 2019 (10)

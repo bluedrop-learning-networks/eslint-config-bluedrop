@@ -4,28 +4,27 @@
 [![Build Status](https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/workflows/Test/badge.svg)](https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/actions)
 [![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)](https://raw.githubusercontent.com/bluedrop-learning-networks/eslint-config-bluedrop/master/LICENSE)
 
-This package provides Bluedrop's ESLint configuration as an extensible shared config.
+This package provides Bluedrop's ESLint configuration as an extensible shared set of configurations.
 
 ## Usage
 
-We export two ESLint configurations for your usage.
-
 ### General Setup
 
-1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint-plugin-eslint-comments eslint-plugin-import eslint-plugin-unicorn eslint`
+1. `npm install --save-dev eslint-config-bluedrop@latest eslint@7`
 
 ### eslint-config-bluedrop
 
-Our default export contains all of our ESLint rules, including ECMAScript 6+.
+Our default export contains all of our ESLint rules, including support for ECMAScript 2020.
 
 1. Add `"extends": "bluedrop"` to your ESLint config file
+1. `npm install --save-dev eslint-plugin-filenames@1 eslint-plugin-promise@4 eslint-plugin-security@1 eslint-plugin-eslint-comments@3 eslint-plugin-import@2 eslint-plugin-unicorn@20`
 
 ### eslint-config-bluedrop/config/babel
 
 An extension of `eslint-config-bluedrop` that adds support for eslint-babel.
 
 1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-babel`
+1. `npm install --save-dev eslint-plugin-babel@5`
 1. Add `"extends": ["bluedrop", "bluedrop/config/babel"]` to your ESLint config file
 
 ### eslint-config-bluedrop/config/chai
@@ -33,7 +32,7 @@ An extension of `eslint-config-bluedrop` that adds support for eslint-babel.
 An extension of `eslint-config-bluedrop` that adds support for chai.
 
 1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-chai-expect`
+1. `npm install --save-dev eslint-plugin-chai-expect@2`
 1. Add `"extends": ["bluedrop", bluedrop/config/chai"]` to your ESLint config file
 
 ### eslint-config-bluedrop/config/console
@@ -48,7 +47,7 @@ An extension of `eslint-config-bluedrop` that adds support for console applicati
 An extension of `eslint-config-bluedrop` that adds support for Mocha.
 
 1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-mocha`
+1. `npm install --save-dev eslint-plugin-mocha@7`
 1. Add `"extends": ["bluedrop", "bluedrop/config/mocha"]` to your ESLint config file
 
 ### eslint-config-bluedrop/config/node
@@ -56,7 +55,7 @@ An extension of `eslint-config-bluedrop` that adds support for Mocha.
 An extension of `eslint-config-bluedrop` that adds support for Node.
 
 1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-node`
+1. `npm install --save-dev eslint-plugin-node@11`
 1. Add `"extends": ["bluedrop", "bluedrop/config/node"`] to your ESLint config file
 
 ### eslint-config-bluedrop/config/react
@@ -64,18 +63,20 @@ An extension of `eslint-config-bluedrop` that adds support for Node.
 An extension of `eslint-config-bluedrop` that adds support for React.
 
 1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-node eslint-plugin-jsx-a11y eslint-plugin-react eslint-plugin-react-hooks`
+1. `npm install --save-dev eslint-plugin-node eslint-plugin-jsx-a11y@6 eslint-plugin-react@7 eslint-plugin-react-hooks@4`
 1. Add `"extends": ["bluedrop", "bluedrop/config/react"]` to your ESLint config file
-1. You can also specify your react version (if it is not the latest version) in your ESLint config file like so:
+1. You can also specify your React version number (if it is not the latest version) in your ESLint config file like so:
 
 ```javascript
-...
-settings: {
-  react: {
-    version: '16.x', // defaults to 'detect'
+module.exports = {
+  // ...
+  settings: {
+    react: {
+      version: '16.x', // defaults to 'detect'
+    },
   },
-}
-...
+  // ...
+};
 ```
 
 ## Semantic Versioning Policy
@@ -116,6 +117,14 @@ same order as defined on the [ESLint rules](http://eslint.org/docs/rules/) page.
 
 This project self-lints and ensure that all file paths are correct. You can run these checks with the `npm run test`
 command.
+
+## Migrations
+
+### Version 8.0.0 to 9.0.0
+
+- Remove `'bluedrop/config/ecmascript-2018'` and `'bluedrop/config/ecmascript-2019'` from ESLint config files as they are now part of the standard configuration.
+- Typescript linting has been removed and any projects using it will need to manage the configuration manually.
+- JSDoc plugin and configuration has been removed and any references to it will need to be removed.
 
 ## License
 
