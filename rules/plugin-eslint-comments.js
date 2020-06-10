@@ -20,5 +20,6 @@ module.exports = {
 			'eslint-disable-next-line',
 			'eslint-enable',
 		]}],
+		'eslint-comments/require-description': 'off',
 	},
 };

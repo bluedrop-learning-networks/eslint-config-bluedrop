@@ -10,9 +10,22 @@ module.exports = {
 		'react/forbid-component-props': 'off', // allow for className
 		'react/forbid-dom-props': 'off',
 		'react/forbid-elements': 'off',
-		'react/forbid-prop-types': 'off',
+		'react/forbid-prop-types': [
+			'error',
+			{
+				forbid: ['object', 'array'],
+			},
+		],
+		'react/function-component-definition': [
+			'error',
+			{
+				namedComponents: 'function-declaration',
+				unnamedComponents: 'arrow-function',
+			},
+		],
 		'react/forbid-foreign-prop-types': 'off',
 		'react/no-access-state-in-setstate': 'off',
+		'react/no-adjacent-inline-elements': 'off',
 		'react/no-array-index-key': 'error',
 		'react/no-children-prop': 'error',
 		'react/no-danger': 'error',
@@ -96,6 +109,7 @@ module.exports = {
 		'react/jsx-no-comment-textnodes': 'error',
 		'react/jsx-no-duplicate-props': 'error',
 		'react/jsx-no-literals': 'off',
+		'react/jsx-no-script-url': 'error',
 		'react/jsx-no-target-blank': 'error',
 		'react/jsx-no-undef': 'error',
 		'react/jsx-no-useless-fragment': 'error',

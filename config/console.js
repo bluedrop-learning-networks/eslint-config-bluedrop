@@ -3,8 +3,9 @@
 module.exports = {
 	rules: {
 		'no-console': 'off',
-		'no-process-env': 'off',
-		'security/detect-non-literal-fs-filename': 'off',
+		'node/no-process-env': 'off',
 		'security/detect-child-process': 'off',
+		'security/detect-non-literal-fs-filename': 'off',
+		'security/detect-unsafe-regex': 'off',
 	},
 };
