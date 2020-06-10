@@ -12,7 +12,7 @@ We export two ESLint configurations for your usage.
 
 ### General Setup
 
-1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint-plugin-jsdoc eslint-plugin-eslint-comments eslint-plugin-import eslint-plugin-unicorn eslint`
+1. `npm install --save-dev eslint-config-bluedrop eslint-plugin-filenames eslint-plugin-promise eslint-plugin-security eslint-plugin-eslint-comments eslint-plugin-import eslint-plugin-unicorn eslint`
 
 ### eslint-config-bluedrop
 
@@ -92,14 +92,6 @@ settings: {
 ...
 ```
 
-### `eslint-config-bluedrop/config/typescript`
-
-Adds support for `typescript-eslint-parser` and the [ESLint Typescript Plugin][@typescript-eslint/eslint-plugin].
-
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev  babel-eslint @typescript-eslint/eslint-plugin`
-1. add `"extends": ["bluedrop", "bluedrop/config/typescript"]` to your ESLint config file
-
 ## Semantic Versioning Policy
 
 `eslint-config-bluedrop` follows [semantic versioning](https://semver.org). However, due to the nature of code quality
@@ -142,5 +134,3 @@ command.
 ## License
 
 This project is released under the ISC license. See [LICENSE](LICENSE).
-
-[@typescript-eslint/eslint-plugin]:https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin

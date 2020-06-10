@@ -39,7 +39,6 @@ module.exports = {
 		'../rules/plugin-react-hooks.js',
 		'../rules/plugin-react.js',
 		'../rules/plugin-security.js',
-		'../rules/plugin-typescript.js',
 		'../rules/plugin-unicorn',
 		'../rules/possible-errors.js',
 		'../rules/strict-mode.js',
