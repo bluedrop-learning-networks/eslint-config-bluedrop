@@ -24,7 +24,6 @@ module.exports = {
 		'../rules/ecmascript-2015.js',
 		'../rules/ecmascript-2017.js',
 		'../rules/ecmascript-2018.js',
-		'../rules/node-and-common.js',
 		'../rules/plugin-babel.js',
 		'../rules/plugin-chai-expect.js',
 		'../rules/plugin-eslint-comments',
