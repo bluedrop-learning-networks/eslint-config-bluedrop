@@ -43,20 +43,6 @@ An extension of `eslint-config-bluedrop` that adds support for console applicati
 1. Ensure you have installed the dependencies from General Setup
 1. Add `"extends": ["bluedrop", bluedrop/config/console"]` to your ESLint config file
 
-### eslint-config-bluedrop/config/ecmascript-2018
-
-An extension of `eslint-config-bluedrop` that adds support for ECMAScript 9 - 2018.
-
-1. Ensure you have installed the dependencies from General Setup
-1. Add `"extends": ["bluedrop", "bluedrop/config/ecmascript-2018"]` to your ESLint config file
-
-### eslint-config-bluedrop/config/ecmascript-2019
-
-An extension of `eslint-config-bluedrop` that adds support for ECMAScript 10 - 2019.
-
-1. Ensure you have installed the dependencies from General Setup
-1. Add `"extends": ["bluedrop", "bluedrop/config/ecmascript-2019"]` to your ESLint config file
-
 ### eslint-config-bluedrop/config/mocha
 
 An extension of `eslint-config-bluedrop` that adds support for Mocha.
