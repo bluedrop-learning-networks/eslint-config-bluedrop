@@ -101,7 +101,6 @@ module.exports = {
 		'prefer-regex-literals': 'error',
 		'prefer-named-capture-group': 'error',
 		radix: 'error',
-		'require-atomic-updates': 'error',
 		'require-await': 'off',
 		'require-unicode-regexp': 'error',
 		'vars-on-top': 'error',
