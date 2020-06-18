@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [9.0.0] - 2020-06-10
 ### Added
 - Support for ECMAScript 2020 (11)
+- Interactive dependency install script
 
 ### Changed
 - Update ESLint and all plugins to latest and configure all new rules (breaking)
