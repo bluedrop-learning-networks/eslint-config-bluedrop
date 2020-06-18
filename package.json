@@ -3,12 +3,17 @@
   "version": "8.0.0",
   "description": "Bluedrop's ESLint configurations",
   "main": "config/common.js",
+  "bin": {
+    "bln-eslint-install-dependencies": "./bin/install-dependencies.sh"
+  },
   "files": [
     "config/",
     "rules/"
   ],
   "scripts": {
+    "lint": "npm run eslint && npm run shellcheck",
     "eslint": "eslint .",
+    "shellcheck": "./scripts/lint-shell.sh",
     "test": "scripts/test.sh",
     "find-new-rules": "eslint-find-rules --deprecated --unused ./scripts/all-combined.js"
   },
