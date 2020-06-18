@@ -8,6 +8,15 @@ This package provides Bluedrop's ESLint configuration as an extensible shared se
 
 ## Usage
 
+### Interactive Dependency Install Script
+
+This project includes an interactive script that will install the required dependencies depending on the configurations selected. To run the script, from the project root:
+
+```shell
+npm install --save-dev eslint-config-bluedrop
+./node_modules/.bin/bln-eslint-install-dependencies
+```
+
 ### General Setup
 
 1. `npm install --save-dev eslint-config-bluedrop@latest eslint@7`

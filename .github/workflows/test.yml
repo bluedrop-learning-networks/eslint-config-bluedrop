@@ -3,7 +3,14 @@ name: Test
 on: [push]
 
 jobs:
-  build:
+  shellcheck:
+    runs-on: [ubuntu-latest]
+    container: 'docker://koalaman/shellcheck-alpine'
+    steps:
+      - uses: actions/checkout@v2
+      - run: './scripts/lint-shell.sh'
+
+  tests:
     name: Node ${{ matrix.node }} build
     runs-on: ubuntu-latest
     strategy:
@@ -13,4 +20,5 @@ jobs:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
       - run: npm ci
-      - run: npm test
+      - run: npm run test
+      - run: npm run eslint
