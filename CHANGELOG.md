@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
-## [9.0.0] - 2020-06-10
+## [9.0.0] - 2020-06-19
 ### Added
 - Support for ECMAScript 2020 (11)
 - Interactive dependency install script
@@ -129,7 +129,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 - Initial rule set
 
-[Unreleased]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v8.0.0...HEAD
+[Unreleased]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v9.0.0...HEAD
+[9.0.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v8.0.0...v9.0.0
 [8.0.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v7.2.0...v8.0.0
 [7.2.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v7.1.0...v7.2.0
 [7.1.0]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/compare/v7.0.0...v7.1.0
