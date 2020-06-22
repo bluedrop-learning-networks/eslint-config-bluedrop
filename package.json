@@ -15,7 +15,8 @@
     "eslint": "eslint .",
     "shellcheck": "./scripts/lint-shell.sh",
     "test": "scripts/test.sh",
-    "find-new-rules": "eslint-find-rules --deprecated --unused ./scripts/all-combined.js"
+    "find-new-rules": "eslint-find-rules --deprecated --unused ./scripts/all-combined.js",
+    "check-deprecated": "eslint-find-rules --deprecated "
   },
   "repository": {
     "type": "git",
