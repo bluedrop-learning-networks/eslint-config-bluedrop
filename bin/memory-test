@@ -1,0 +1,39 @@
+const usage = () => Object.fromEntries(Object.entries(process.memoryUsage()).map(([k,v]) => [k, Math.round(v / 1024 / 1024 * 100) + ' MB']))
+const heapTotal = name => console.log(name+':',usage().heapTotal)
+
+console.log('======================')
+heapTotal('pre')
+
+const {legacy} = require('.');
+heapTotal('{legacy}')
+
+const common = legacy.common
+heapTotal('legacy.common')
+
+const node = legacy.node
+heapTotal('legacy.node')
+
+
+console.log()
+process.exit()
+const {version, recommended: {library}} = require('.');
+module.exports = [
+	...library,
+	{
+		// global ignores
+		ignores: ['bin/*', 'scratch**'],
+	},
+	{
+		rules: {
+			'security/detect-non-literal-regexp': 'off',
+			'n/no-unpublished-require': 'off',
+			'jsdoc/no-undefined-types': 'off',
+		},
+	},
+	{
+		files: ['scripts/*.js'],
+		rules: {
+			'no-console': 'off',
+		},
+	},
+];

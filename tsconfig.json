@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "allowJs": true,
+	"target":"ES2023",
+    "declaration": true,
+    "removeComments": false,
+    "emitDeclarationOnly": true,
+	"outFile": "src/index.d.ts",
+	"resolveJsonModule": true,
+    "declarationMap": false
+  },
+  "include": [ "./src/**/*.js" ],
+  "exclude": [ "./node_modules" ]
+}

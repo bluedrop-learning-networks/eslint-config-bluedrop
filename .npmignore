@@ -1,0 +1,6 @@
+*
+!src/**
+!legacy/**
+!recommended/**
+!bin/status-report.js
+!docs/api.md

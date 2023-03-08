@@ -1,0 +1,219 @@
+toc:
+  - name: WIP, RTFC.
+  - name: The default export & submodules
+    description: |
+      The default export has access to everything.
+      ```js
+      const {
+        recommended: { api, worker, client, library },
+        legacy: { common, node, react, mocha, chai, jsdoc, etc... },
+        utils: { getStack, getLayer, getLayerNames },
+        meta: { allRuleNames, overlappingLayerRules, deprecatedRuleNames, etc... }
+      } = require('eslint-config-bluedrop')
+      ```
+      Submodules can also be imported directly.
+      > This uses less memory & is recommended
+      ```js
+      const api = require('eslint-config-bluedrop/recommended/api')
+      ```
+  - name: Types & Conventions
+    description: |
+      There are two primary Types used to organize and encapsulate our
+      eslint configs.
+
+      They are the __Layer__ & the __Stack__ 
+      ```js
+      const layer = { // ------------------------------------------------ |
+          files: ['mod/*.mjs'], //                                        |-- Layer
+          languageOptions: { sourceType: 'module'}, //                    |
+      } // -------------------------------------------------------------- |
+     
+      const stack = [ // ------------------------------------------------ |
+          ...library, // <----------- Some Recommended Layers             |-- Stack
+          layer, // <---------------- Our Layer                           |
+      ] // -------------------------------------------------------------- |
+     
+      module.exports = stack // <-----------------------------------------|-- Config
+      ```
+    children:
+      - Layer
+      - Stack
+      - RuleSet
+  - name: Recommended Configurations for Bluedrop Projects
+    description: |
+      This module contains the latest recommended eslint configurations
+      for a given type of project.
+
+      It is currently a work in progress.
+
+      ```js
+      const recommended = require('eslint-config-bluedrop/src/recommended')
+      module.exports = recommended.library
+      ```
+      Or more Likely
+      ```js
+      const { library } = require('eslint-config-bluedrop/src/recommended')
+      module.exports = [
+         ...library,
+         { rules: { 'no-console': 'off' } }, // with a repo specific rule
+      ];
+      ```
+  - recommended
+  - name: Migrating from an Earlier Version
+    description: |
+      The __legacy__ stacks are intended to make the migration from earlier versions of eslint-config-bluedrop easier.
+
+      Previous to version 9, bluedrop eslint configs were used in one or more `.eslintrc.js` files,
+      following the original (not flat) eslint configuration schema
+
+      The newer eslint config schema is a bit easier to work with, but is structured a bit differently.
+
+      ### Migrating from versions pre-9.x
+      
+      - [ ] Uninstall our module & any of the following eslint plugins
+            (our module will make the proper version of each available)
+        ```sh
+        npm uninstall eslint-config-bluedrop \
+            eslint-plugin-babel \
+            eslint-plugin-chai-expect \
+            eslint-plugin-eslint-comments \
+            eslint-plugin-filenames \
+            eslint-plugin-import \
+            eslint-plugin-jsdoc \
+            eslint-plugin-jsx-a11y \
+            eslint-plugin-mocha \
+            eslint-plugin-node \
+            eslint-plugin-promise \
+            eslint-plugin-react \
+            eslint-plugin-react-hooks \
+            eslint-plugin-security \
+            eslint-plugin-unicorn
+        ```
+      - [ ] Install the latest version
+        ```sh
+        npm install eslint-config-bluedrop@latest
+        ```
+      - [ ] Create A new (flat) config file `eslint.config.js`
+      - [ ] import the `legacy` submodule & export an empty array
+        ```js
+        // file -- eslint.config.js
+        const legacy = require('eslint-config-bluedrop/legacy')
+        module.exports = []
+        ```
+      - [ ] Add the appropriate legacy configs to the exported array
+        ```js
+        // perhaps, for example...
+        module.exports = [...legacy.common, ...legacy.node]
+        ```
+      - [ ] Migrate any repo-specific overrides from `.eslintrc.js` or `test/.eslintrc.js` or `bin/.eslintrc.js`
+        ```js
+        // or ./dev/dredd/hooks/.eslintrc.js or...
+        module.exports = [
+          ...legacy.common,
+          ...legacy.node,
+          {
+            files: ['dev/dredd/hooks/**/*.js'],
+            rules: {
+              'max-len': [ 'error',
+                { code: 120, ignoreComments: true, },
+              ],
+            },
+          },
+        ]
+        // In the flat config schema, there is only one config entrypoint.
+        // Any additional configs must be explicitly imported, as ours are via require
+        ```
+
+      ### Extension Mappings
+      Previously, bluedrop eslint configs were invoked by pasing a configuration name to eslint via an `extends`
+      config option in an `.eslintrc.js` file. The base (or "common") config was simply refered to as `'bluedrop'`,
+      while references to other configurations follwed the pattern:
+      ```js
+      `bludrop/config/${name}`
+      ```
+
+      Apart from the special case of the base config, the legacy module follows the following convention:
+
+      ```js
+      // A pre-v9 extension 
+      'bludrop/config/x' 
+
+      // The equivalent flat config Stack
+      legacy.x 
+      ```
+      
+      Here is a more complete example
+      ```js
+      /* ----------- This ------------ */
+
+      // ./.eslintrc.js
+      module.exports = {
+        root: true,
+        extends: [
+          'bluedrop',
+          'bluedrop/config/node',
+        ],
+      };
+
+      // ./test/eslintrc.js
+      module.exports = {
+        root: true,
+        extends: [
+          'bluedrop/config/mocha',
+          'bluedrop/config/chai',
+        ],
+        rules: { 'mocha/no-hooks-for-single-case': 'off' }
+      };
+      
+      /* ---------- Becomes ---------- */
+      
+      // ./eslint.config.js
+      const common = require('eslint-config-bluedrop/legacy/common')
+      const node = require('eslint-config-bluedrop/legacy/node')
+      const mocha = require('eslint-config-bluedrop/legacy/mocha')
+      const chai = require('eslint-config-bluedrop/legacy/chai')
+
+      module.exports = [
+        ...common,
+        ...node,
+        ...mocha,
+        ...chai,
+        {
+          files: ['test/**/*.js'],
+          rules: { 'mocha/no-hooks-for-single-case': 'off' },
+        }
+      ]
+      ```
+  - utils
+  - meta
+  - name: Utility Functions
+    children:
+      - getStack
+      - getLayer
+      - getLayerNames
+  - name: Available Metadata
+    description: |
+      Metadata is inteded to be useful for maintenance of this module, or a specific configuration.
+
+      At the time of this writing, the previously used tools have been made obsolete by the new
+      configuration schema. This reproduces a subset of that functionality.
+
+      Access is pretty standard
+      ```js
+      const { ourRuleNames, deprecatedRuleNames } = require('eslint-config-bluedrop/src/meta')
+      ```
+    children:
+      - allRuleNames
+      - ourRuleNames
+      - rulesByLayer
+      - deprecatedRuleNames
+      - unusedRuleNames
+      - overlappingLayerRules
+      - identicalLayerRules
+  - name: Exports
+    children:
+      - main
+      - recommended
+      - legacy
+      - utils
+      - meta

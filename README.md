@@ -1,6 +1,6 @@
 # eslint-config-bluedrop
 
-[![Dependency Status](https://david-dm.org/bluedrop-learning-networks/eslint-config-bluedrop/dev-status.svg)](https://david-dm.org/bluedrop-learning-networks/eslint-config-bluedrop/dev-status.svg)
+[![Dependency Status](https://img.shields.io/librariesio/release/npm/eslint-config-bluedrop?color=yellow&label=upstream&style=for-the-badge)]()
 [![Build Status](https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/workflows/Test/badge.svg)](https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/actions)
 [![GitHub license](https://img.shields.io/badge/license-ISC-blue.svg)](https://raw.githubusercontent.com/bluedrop-learning-networks/eslint-config-bluedrop/master/LICENSE)
 
@@ -8,85 +8,21 @@ This package provides Bluedrop's ESLint configuration as an extensible shared se
 
 ## Usage
 
-### Interactive Dependency Install Script
-
-This project includes an interactive script that will install the required dependencies depending on the configurations selected. To run the script, from the project root:
-
-```shell
-npm install --save-dev eslint-config-bluedrop
-./node_modules/.bin/bln-eslint-install-dependencies
-```
-
 ### General Setup
 
-1. `npm install --save-dev eslint-config-bluedrop@latest eslint@7`
+1. `npm install --save-dev eslint-config-bluedrop@latest`
 
-### eslint-config-bluedrop
-
-Our default export contains all of our ESLint rules, including support for ECMAScript 2020.
-
-1. Add `"extends": "bluedrop"` to your ESLint config file
-1. `npm install --save-dev eslint-plugin-filenames@1 eslint-plugin-promise@4 eslint-plugin-security@1 eslint-plugin-eslint-comments@3 eslint-plugin-import@2 eslint-plugin-unicorn@20`
-
-### eslint-config-bluedrop/config/babel
-
-An extension of `eslint-config-bluedrop` that adds support for eslint-babel.
-
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-babel@5`
-1. Add `"extends": ["bluedrop", "bluedrop/config/babel"]` to your ESLint config file
-
-### eslint-config-bluedrop/config/chai
-
-An extension of `eslint-config-bluedrop` that adds support for chai.
-
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-chai-expect@2`
-1. Add `"extends": ["bluedrop", bluedrop/config/chai"]` to your ESLint config file
-
-### eslint-config-bluedrop/config/console
-
-An extension of `eslint-config-bluedrop` that adds support for console applications.
-
-1. Ensure you have installed the dependencies from General Setup
-1. Add `"extends": ["bluedrop", bluedrop/config/console"]` to your ESLint config file
-
-### eslint-config-bluedrop/config/mocha
-
-An extension of `eslint-config-bluedrop` that adds support for Mocha.
-
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-mocha@7`
-1. Add `"extends": ["bluedrop", "bluedrop/config/mocha"]` to your ESLint config file
-
-### eslint-config-bluedrop/config/node
-
-An extension of `eslint-config-bluedrop` that adds support for Node.
-
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-node@11`
-1. Add `"extends": ["bluedrop", "bluedrop/config/node"`] to your ESLint config file
-
-### eslint-config-bluedrop/config/react
-
-An extension of `eslint-config-bluedrop` that adds support for React.
-
-1. Ensure you have installed the dependencies from General Setup
-1. `npm install --save-dev eslint-plugin-node eslint-plugin-jsx-a11y@6 eslint-plugin-react@7 eslint-plugin-react-hooks@4`
-1. Add `"extends": ["bluedrop", "bluedrop/config/react"]` to your ESLint config file
-1. You can also specify your React version number (if it is not the latest version) in your ESLint config file like so:
+### Basic Usage (New Projects)
 
 ```javascript
-module.exports = {
-  // ...
-  settings: {
-    react: {
-      version: '16.x', // defaults to 'detect'
-    },
-  },
-  // ...
-};
+// file eslint.config.js
+const {library} = require('eslint-config-bluedrop/src/recommended')
+module.exports = [
+	...library,
+];
 ```
+
+See the [api docs](./docs/api.md) for *much more* about this.
 
 ## Semantic Versioning Policy
 
@@ -128,6 +64,10 @@ This project self-lints and ensure that all file paths are correct. You can run 
 command.
 
 ## Migrations
+
+### Version 9.0.0 to 10.0.0
+
+See the Migrations section of the [api documentation](./docs/node-api.md#legacy)
 
 ### Version 8.0.0 to 9.0.0
 

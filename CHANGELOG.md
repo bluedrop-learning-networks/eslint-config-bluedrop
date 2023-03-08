@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [10.0.0] - 2023-03-00
+### Added
+- Support for ECMAScript [2021 - 2023]
+- JSDoc plugin and configuration
+
+### Changed
+- Update ESLint and all plugins to latest and configure all new rules (breaking)
+
+### Removed
+- Interactive dependency install script
+
 ## [9.0.0] - 2020-06-19
 ### Added
 - Support for ECMAScript 2020 (11)

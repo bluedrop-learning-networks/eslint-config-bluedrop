@@ -1,0 +1,175 @@
+#!/usr/bin/env node
+
+const {
+	legacy,
+	utils: {
+		getLayerNames,
+	},
+	meta: {
+		allRuleNames,
+		rulesByLayer,
+		deprecatedRuleNames,
+		unusedRuleNames,
+		overlappingLayerRules,
+	},
+} = require('..');
+
+// I don't know if i like columnify...
+const columnify = require('columnify');
+const {log, table} = require('node:console');
+
+const {keys, values, entries, fromEntries} = Object;
+
+const summary = [
+	{number: allRuleNames.length, 'of-what': 'total rules'},
+	{number: deprecatedRuleNames.length, 'of-what': 'deprecated rules'},
+	{number: keys(overlappingLayerRules(getLayerNames())).length, 'of-what': 'overlapping rules'},
+	{number: unusedRuleNames.length, 'of-what': 'unused rules'},
+];
+
+const allOverlaps = overlappingLayerRules(getLayerNames());
+const overlappingLayerNames = keys(values(allOverlaps).reduce(
+	(accumulator, v) => ({...accumulator, ...v}), {}
+));
+
+const prettyOverlapOverview = entries(
+	entries(allOverlaps)
+		.reduce(
+			(accumulator, [rule, layers]) => {
+				const overlap = keys(layers).sort().join('\n');
+				accumulator[overlap] = accumulator[overlap]
+					? [...accumulator[overlap], rule]
+					: [rule];
+				return accumulator;
+			},
+			{},
+		),
+).map(([overlap, rules]) => {
+	// bslint-disable no-playing-with-stdout-on-weekends
+	const left = overlap.split('\n').length;
+	const right = rules.length;
+	const dash = '-';
+	const blank = '.';
+	const pad = [blank.repeat(18), '\n'].join('');
+	const chars = {
+		top: `${blank.repeat(3)}\n${dash}|${dash}`,
+		both: `${dash}|${dash}`,
+		left: `${dash}|${blank}`,
+		right: `${blank}|${dash}`,
+	};
+	const separator = [...'|'.repeat(Math.max(left, right))]
+		.map((_, index) => {
+			if (index === 0) {
+				return chars.top;
+			}
+
+			if (index < left && index < right) {
+				return chars.both;
+			}
+
+			if (index < left && index >= right) {
+				return chars.left;
+			}
+
+			if (index >= left && index < right) {
+				return chars.right;
+			}
+			return '';
+		}).join('\n');
+	return {
+		overlap: pad + overlap,
+		'|': separator,
+		rules: pad + rules.join('\n'),
+	};
+});
+
+const overlapsForLayer = layerInFocus => {
+	const data = fromEntries(entries(overlappingLayerRules(getLayerNames()))
+		.filter(([_, overlap]) => keys(overlap).includes(layerInFocus))
+		.map(
+			([ruleName, overlap]) => {
+				const overlapDetail = entries(overlap)
+					.sort(([layerName]) => {
+						const isFocus = new RegExp(layerInFocus, 'u');
+						return isFocus.test(layerName) && -1;
+					})
+					.map(
+						([layerName, settingObject]) => {
+							const setting = JSON.stringify(settingObject);
+							return {setting, layer: layerName};
+						},
+					);
+				return [ruleName, overlapDetail];
+			},
+		)
+		.map(([k, v]) => [k, v]));
+	return data;
+};
+
+const layersOverview = entries(rulesByLayer)
+	.flatMap(
+		([k, v]) => entries(v)
+			.map(
+				([name, setting]) => ({
+					X: keys(allOverlaps).includes(name) ? 'X' : '',
+					'+': (/off/u).test(setting) ? '-' : '+',
+					layer: k,
+					rule: name,
+				}),
+			),
+	);
+
+const hr = '-'.repeat(6);
+
+const printSummary = () => table(summary);
+const printPrettyOverlapOverview = () => log(columnify(prettyOverlapOverview, {
+	preserveNewLines: true,
+	columns: ['overlap', '|', 'rules'],
+	config: {overlap: {align: 'right', headingTransform: () => 'LAYERS'}, '|': {align: 'center'}},
+}));
+
+const printOverlapBreakdown = () => {
+	for (const overlappingLayerName of overlappingLayerNames) {
+		log(`### \`${overlappingLayerName}\``);
+		log('```sh');
+		for (const [rule, overlap] of entries(overlapsForLayer(overlappingLayerName))) {
+			log('Rule:', rule);
+			table(overlap, ['layer', 'setting']);
+		}
+
+		log('```');
+		log(hr);
+	}
+};
+
+const printLayerOverviewKey = `
+X ----> rule is set/unset in multiple layers
+  + --> rule is enabled in this layer
+  - --> rule is disabled in this layer
+`;
+
+const printLayerOverview = () => log(printLayerOverviewKey, columnify(layersOverview, {}));
+const print = list => {
+	for (const line of list) {
+		if (typeof line === 'function') { line(); }
+		else { log(line); }
+	}
+};
+
+print([
+	'## Summary',
+	'```sh',
+	printSummary,
+	'```',
+	hr,
+	'## Overlap Overview',
+	'```sh',
+	printPrettyOverlapOverview,
+	'```',
+	'## Overlapping Rules by Layer',
+	printOverlapBreakdown,
+	'## Layer Overview',
+	'```sh',
+	printLayerOverview,
+	'```',
+]);

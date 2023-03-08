@@ -1,57 +1,86 @@
 {
   "name": "eslint-config-bluedrop",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "description": "Bluedrop's ESLint configurations",
-  "main": "config/common.js",
-  "bin": {
-    "bln-eslint-install-dependencies": "./bin/install-dependencies.sh"
-  },
-  "files": [
-    "config/",
-    "rules/"
-  ],
-  "scripts": {
-    "lint": "npm run eslint && npm run shellcheck",
-    "eslint": "eslint .",
-    "shellcheck": "./scripts/lint-shell.sh",
-    "test": "scripts/test.sh",
-    "find-new-rules": "eslint-find-rules --deprecated --unused ./scripts/all-combined.js",
-    "check-deprecated": "eslint-find-rules --deprecated "
+  "license": "ISC",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bluedrop-learning-networks/eslint-config-bluedrop.git"
   },
-  "keywords": [
-    "eslint",
-    "eslintconfig"
-  ],
-  "author": "Tim Oram <timoram@bluedrop.com>",
-  "contributors": [
-    "Tim Oram <timoram@bluedrop.com>",
-    "David Valentiate <me@davidv.ca>"
-  ],
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/issues"
   },
   "homepage": "https://github.com/bluedrop-learning-networks/eslint-config-bluedrop#readme",
-  "devDependencies": {
+  "author": "Tim Oram <timoram@bluedrop.com>",
+  "contributors": [
+    "Tim Oram <timoram@bluedrop.com>",
+    "David Valentiate <me@davidv.ca>",
+    "Andrew Toelle <andrewtoelle@bluedrop.com>"
+  ],
+  "keywords": [
+    "eslint",
+    "eslintconfig"
+  ],
+  "bin": {
+    "status-report": "bin/status-report"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./legacy": "./src/legacy/index.js",
+    "./legacy/*": "./src/legacy/*.js",
+    "./meta": "./src/meta.js",
+    "./recommended": "./src/recommended/index.js",
+    "./recommended/*": "./src/recommended/*.js",
+    "./utils": "./src/utils.js"
+  },
+  "scripts": {
+    "build": " npm run build:docs && npm run build:lockfile && npm run build:report && npm run build:types",
+    "build:docs": "npm run build:docs:api && npm run build:docs:test-jsdoc2md",
+    "build:docs:api": "documentation build ./src/*.js --resolve node --shallow --github --markdown-toc true --markdown-toc-max-depth 2 -c documentation.config.yml -f md >docs/api.md",
+    "build:docs:test-jsdoc2md": "jsdoc2md --no-cache -m grouped --separators src/* >docs/alternate-documentation-generator-test.md",
+    "build:jsdoc": "echo 'nope'; exit 0; jsdoc-gen",
+    "build:lockfile": "npm install --prefix ./",
+    "build:report": "npm run build:report:status && npm run build:report:namepaths",
+    "build:report:jsdoc-namepaths": "mkdir -p docs/report && jsdoc2md --namepaths src/* >docs/report/namepaths.json",
+    "build:report:status": "mkdir -p docs/report && status-report >docs/report/status.md",
+    "build:types": "tsc",
+    "lint": "eslint .",
+    "prepublishOnly": "npm t",
+    "preview:docs": "hads -ro",
+    "test": "npm run lint"
+  },
+  "typings": "src/index.d.ts",
+  "dependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.3.0",
-    "eslint-find-rules": "^3.5.0",
-    "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-chai-expect": "^2.1.0",
+    "eslint": "^8.35.0",
+    "eslint-plugin-babel": "^5.3.1",
+    "eslint-plugin-chai-expect": "^3.0.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-filenames": "^1.3.2",
-    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsdoc": "^40.0.1",
     "eslint-plugin-jsx-a11y": "^6.3.1",
-    "eslint-plugin-mocha": "^7.0.1",
+    "eslint-plugin-mocha": "^10.0.3",
+    "eslint-plugin-n": "^15.6.1",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.4",
-    "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-unicorn": "^20.1.0"
+    "eslint-plugin-security": "^1.7.1",
+    "eslint-plugin-unicorn": "^46.0.0",
+    "globals": "^13.20.0"
+  },
+  "devDependencies": {
+    "columnify": "^1.6.0",
+    "documentation": "^14.0.1",
+    "hads": "^3.0.3",
+    "jsdoc-to-markdown": "^8.0.0",
+    "recast": "^0.22.0",
+    "typescript": "^4.9.5"
   }
 }

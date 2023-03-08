@@ -1,2 +1,5 @@
 node_modules
-eslint-config-bluedrop-*.tgz
+reports
+scratch*
+build
+types.d.ts

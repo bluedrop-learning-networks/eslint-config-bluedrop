@@ -1,0 +1,67 @@
+#!/usr/bin/env node
+
+/**
+ * @file doc-gen.js
+ */
+
+/**
+ * WIP
+ * This is an experimental generator which adds/amends the jsdoc comments of legacy.js
+ *
+ * There are more fruitful subjects for future codemods
+ * - an sql formatter
+ * - an import formatter that enforces bluedrop specific sort order
+ *
+ * Regardless of the subject, this repo seems a good place for codemods,
+ * though starting with eslint integration (and thus editor integration)
+ * would seem to be a primary consideration.
+ */
+
+const {rmSync, readFileSync, writeFileSync, mkdirSync} = require('node:fs');
+const {resolve, dirname} = require('node:path');
+const recast = require('recast');
+
+const legacy = readFileSync(resolve(__dirname, '../src/legacy.js'), 'utf8');
+const ast = recast.parse(legacy);
+
+const comments = [];
+recast.visit(ast, {
+	visitComment(path) {
+		const newComment = recast.types.builders.commentBlock(path.value.value);
+		comments.push(newComment);
+		return false;
+	},
+	visitProperty(path) {
+		const kind = path.value.kind;
+		if (kind !== 'get') { return false; }
+		const name = path.value.key.name;
+		const p = t => String(t).split('\n')
+			.map(line=>line.replace(/^[^\*]*/g, '\t')).join('\n')
+		// This is generating spaces instead of tabs for some reason...
+		const comment = p`
+			* From - { extends:['bluedrop/config/${name}'] }
+			*
+			* @type {Stack}
+			`
+		const newComment = recast.types.builders.commentBlock(comment);
+		path.value.comments = [newComment];
+		comments.push(newComment);
+		return false;
+	},
+});
+
+const justComments = recast.parse('// whatever');
+justComments.program.comments = comments;
+
+[
+	[ ast, 'legacy.codemodded.js' ],
+	[ justComments, 'legacy-comments.codemodded.js' ],
+].forEach(([thing, file]) => {
+	const path = resolve(__dirname, '../scratch', file);
+	try { mkdirSync(dirname(path)) } catch { }
+	try{ rmSync(path) }catch{ }
+	writeFileSync(
+		path,
+		recast.print(thing).code,
+	);
+})
