@@ -9,12 +9,13 @@ const {getStack} = require('../utils.js');
  *
  * @type {Object<string, Stack>}
  */
+
 const plannedStacks = {
 	api:getStack([]),
 	client: getStack([]),
 	worker: getStack([]),
 }
-module.exoprts = {
+module.exports = {
 	library,
 	plannedStacks,
 

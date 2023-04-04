@@ -17,12 +17,14 @@
 
 ## The default export & submodules
 
-The default export has access to everything.
+The default export has access to everything, but uses a *lot* of memory. You can use it
+play around w/ all of the bluedrop configs, but you should directly require each submodule
+before you push.
 
 ```js
 const {
-  recommended: { api, worker, client, library },
-  legacy: { common, node, react, mocha, chai, jsdoc, etc... },
+  recommended: { library, plannedStacks },
+  legacy: { chai, common, console, index, jsdoc, mocha, node },
   utils: { getStack, getLayer, getLayerNames },
   meta: { allRuleNames, overlappingLayerRules, deprecatedRuleNames, etc... }
 } = require('eslint-config-bluedrop')
@@ -123,14 +125,14 @@ for a given type of project.
 It is currently a work in progress.
 
 ```js
-const recommended = require('eslint-config-bluedrop/src/recommended')
+const recommended = require('eslint-config-bluedrop/recommended')
 module.exports = recommended.library
 ```
 
 Or more Likely
 
 ```js
-const { library } = require('eslint-config-bluedrop/src/recommended')
+const { library } = require('eslint-config-bluedrop/recommended')
 module.exports = [
    ...library,
    { rules: { 'no-console': 'off' } }, // with a repo specific rule
@@ -167,11 +169,11 @@ The newer eslint config schema is a bit easier to work with, but is structured a
         eslint-plugin-security \
         eslint-plugin-unicorn
     ```
-*   Install the latest version
+*   Install the latest version of eslint-config-bluedrop
     ```sh
     npm install eslint-config-bluedrop@latest
     ```
-*   Create A new (flat) config file `eslint.config.js`
+*   Create A new (flat-style) config file `eslint.config.js`
 *   import the `legacy` submodule & export an empty array
     ```js
     // file -- eslint.config.js
@@ -201,6 +203,24 @@ The newer eslint config schema is a bit easier to work with, but is structured a
     // In the flat config schema, there is only one config entrypoint.
     // Any additional configs must be explicitly imported, as ours are via require
     ```
+*   Switch to the preffered direct submodule imports.
+    ```js
+    const common = require('eslint-config-bluedrop/legacy/common')
+    const node = require('eslint-config-bluedrop/legacy/common')
+
+    module.exports = [
+      ...common,
+      ...node,
+      {
+        files: ['dev/dredd/hooks/**/*.js'],
+        rules: {
+          'max-len': [ 'error',
+            { code: 120, ignoreComments: true, },
+          ],
+        },
+      },
+    ]
+    ```
 
 ### Extension Mappings
 
@@ -215,11 +235,20 @@ while references to other configurations follwed the pattern:
 Apart from the special case of the base config, the legacy module follows the following convention:
 
 ```js
-// A pre-v9 extension 
-'bludrop/config/x' 
+// A pre-v10.x extension 
+'bludrop/config/name' 
 
 // The equivalent flat config Stack
-legacy.x 
+const configs = require('eslint-config-bluedrop')
+module.exports = configs.legacy.name
+
+// Or
+const legacy = require('eslint-config-bluedrop/legacy')
+module.exports = legacy.name
+
+// Or
+const name = require('eslint-config-bluedrop/legacy/name')
+module.exports = name
 ```
 
 Here is a more complete example
@@ -312,7 +341,7 @@ configuration schema. This reproduces a subset of that functionality.
 Access is pretty standard
 
 ```js
-const { ourRuleNames, deprecatedRuleNames } = require('eslint-config-bluedrop/src/meta')
+const { ourRuleNames, deprecatedRuleNames } = require('eslint-config-bluedrop/meta')
 ```
 
 ### allRuleNames
@@ -532,7 +561,7 @@ Type: [object][11]
 
 [8]: #exports
 
-[9]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/index.js#L59-L72 "Source code on GitHub"
+[9]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L59-L72 "Source code on GitHub"
 
 [10]: #stack
 
@@ -540,48 +569,48 @@ Type: [object][11]
 
 [12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[13]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/index.js#L74-L98 "Source code on GitHub"
+[13]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L74-L98 "Source code on GitHub"
 
 [14]: #layer
 
 [15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[16]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/index.js#L100-L102 "Source code on GitHub"
+[16]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L100-L102 "Source code on GitHub"
 
-[17]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/utils.js#L33-L60 "Source code on GitHub"
+[17]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/utils.js#L33-L60 "Source code on GitHub"
 
-[18]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/utils.js#L69-L72 "Source code on GitHub"
+[18]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/utils.js#L69-L72 "Source code on GitHub"
 
-[19]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/utils.js#L18-L24 "Source code on GitHub"
+[19]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/utils.js#L18-L24 "Source code on GitHub"
 
-[20]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/meta.js#L30-L41 "Source code on GitHub"
+[20]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L30-L41 "Source code on GitHub"
 
-[21]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/meta.js#L51-L60 "Source code on GitHub"
+[21]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L51-L60 "Source code on GitHub"
 
-[22]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/meta.js#L70-L84 "Source code on GitHub"
+[22]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L70-L84 "Source code on GitHub"
 
 [23]: #ruleset
 
-[24]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/meta.js#L94-L96 "Source code on GitHub"
+[24]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L94-L96 "Source code on GitHub"
 
-[25]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/meta.js#L106-L108 "Source code on GitHub"
+[25]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L106-L108 "Source code on GitHub"
 
-[26]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/meta.js#L131-L187 "Source code on GitHub"
+[26]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L131-L187 "Source code on GitHub"
 
-[27]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/meta.js#L201-L211 "Source code on GitHub"
+[27]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L201-L211 "Source code on GitHub"
 
-[28]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/index.js#L10-L10 "Source code on GitHub"
+[28]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L10-L10 "Source code on GitHub"
 
 [29]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
 
-[30]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/index.js#L24-L24 "Source code on GitHub"
+[30]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L24-L24 "Source code on GitHub"
 
-[31]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/index.js#L54-L54 "Source code on GitHub"
+[31]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L54-L54 "Source code on GitHub"
 
-[32]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/index.js#L35-L35 "Source code on GitHub"
+[32]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L35-L35 "Source code on GitHub"
 
-[33]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/utils.js#L9-L9 "Source code on GitHub"
+[33]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/utils.js#L9-L9 "Source code on GitHub"
 
-[34]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/index.js#L46-L46 "Source code on GitHub"
+[34]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L46-L46 "Source code on GitHub"
 
-[35]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/bb2225af0c52e44c1d914eb44df6f332cabc87cb/src/meta.js#L13-L13 "Source code on GitHub"
+[35]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L13-L13 "Source code on GitHub"

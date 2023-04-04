@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bluedrop",
-  "version": "10.0.1",
+  "version": "10.0.2",
   "description": "Bluedrop's ESLint configurations",
   "license": "ISC",
   "engines": {
@@ -39,12 +39,11 @@
     "./utils": "./src/utils.js"
   },
   "scripts": {
-    "build": " npm run build:docs && npm run build:lockfile && npm run build:report && npm run build:types",
+    "build": " npm run build:docs && npm run build:report && npm run build:types",
     "build:docs": "npm run build:docs:api && npm run build:docs:test-jsdoc2md",
     "build:docs:api": "documentation build ./src/*.js --resolve node --shallow --github --markdown-toc true --markdown-toc-max-depth 2 -c documentation.config.yml -f md >docs/api.md",
     "build:docs:test-jsdoc2md": "jsdoc2md --no-cache -m grouped --separators src/* >docs/alternate-documentation-generator-test.md",
     "build:jsdoc": "echo 'nope'; exit 0; jsdoc-gen",
-    "build:lockfile": "npm install --prefix ./",
     "build:report": "npm run build:report:status && npm run build:report:namepaths",
     "build:report:jsdoc-namepaths": "mkdir -p docs/report && jsdoc2md --namepaths src/* >docs/report/namepaths.json",
     "build:report:status": "mkdir -p docs/report && status-report >docs/report/status.md",

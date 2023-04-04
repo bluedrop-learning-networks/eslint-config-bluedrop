@@ -4,7 +4,7 @@ const jsdoc = require('./jsdoc');
 const mocha = require('./mocha');
 const node = require('./node');
 
-module.exoprts = {
+module.exports = {
 	chai,
 	common,
 	jsdoc,

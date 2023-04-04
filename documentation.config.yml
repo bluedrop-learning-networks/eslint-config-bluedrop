@@ -2,11 +2,13 @@ toc:
   - name: WIP, RTFC.
   - name: The default export & submodules
     description: |
-      The default export has access to everything.
+      The default export has access to everything, but uses a _lot_ of memory. You can use it
+      play around w/ all of the bluedrop configs, but you should directly require each submodule
+      before you push.
       ```js
       const {
-        recommended: { api, worker, client, library },
-        legacy: { common, node, react, mocha, chai, jsdoc, etc... },
+        recommended: { library, plannedStacks },
+        legacy: { chai, common, console, index, jsdoc, mocha, node },
         utils: { getStack, getLayer, getLayerNames },
         meta: { allRuleNames, overlappingLayerRules, deprecatedRuleNames, etc... }
       } = require('eslint-config-bluedrop')
@@ -47,12 +49,12 @@ toc:
       It is currently a work in progress.
 
       ```js
-      const recommended = require('eslint-config-bluedrop/src/recommended')
+      const recommended = require('eslint-config-bluedrop/recommended')
       module.exports = recommended.library
       ```
       Or more Likely
       ```js
-      const { library } = require('eslint-config-bluedrop/src/recommended')
+      const { library } = require('eslint-config-bluedrop/recommended')
       module.exports = [
          ...library,
          { rules: { 'no-console': 'off' } }, // with a repo specific rule
@@ -89,11 +91,11 @@ toc:
             eslint-plugin-security \
             eslint-plugin-unicorn
         ```
-      - [ ] Install the latest version
+      - [ ] Install the latest version of eslint-config-bluedrop
         ```sh
         npm install eslint-config-bluedrop@latest
         ```
-      - [ ] Create A new (flat) config file `eslint.config.js`
+      - [ ] Create A new (flat-style) config file `eslint.config.js`
       - [ ] import the `legacy` submodule & export an empty array
         ```js
         // file -- eslint.config.js
@@ -123,6 +125,24 @@ toc:
         // In the flat config schema, there is only one config entrypoint.
         // Any additional configs must be explicitly imported, as ours are via require
         ```
+      - [ ] Switch to the preffered direct submodule imports.
+        ```js
+        const common = require('eslint-config-bluedrop/legacy/common')
+        const node = require('eslint-config-bluedrop/legacy/common')
+
+        module.exports = [
+          ...common,
+          ...node,
+          {
+            files: ['dev/dredd/hooks/**/*.js'],
+            rules: {
+              'max-len': [ 'error',
+                { code: 120, ignoreComments: true, },
+              ],
+            },
+          },
+        ]
+        ```
 
       ### Extension Mappings
       Previously, bluedrop eslint configs were invoked by pasing a configuration name to eslint via an `extends`
@@ -135,11 +155,20 @@ toc:
       Apart from the special case of the base config, the legacy module follows the following convention:
 
       ```js
-      // A pre-v9 extension 
-      'bludrop/config/x' 
+      // A pre-v10.x extension 
+      'bludrop/config/name' 
 
       // The equivalent flat config Stack
-      legacy.x 
+      const configs = require('eslint-config-bluedrop')
+      module.exports = configs.legacy.name
+
+      // Or
+      const legacy = require('eslint-config-bluedrop/legacy')
+      module.exports = legacy.name
+
+      // Or
+      const name = require('eslint-config-bluedrop/legacy/name')
+      module.exports = name
       ```
       
       Here is a more complete example
@@ -200,7 +229,7 @@ toc:
 
       Access is pretty standard
       ```js
-      const { ourRuleNames, deprecatedRuleNames } = require('eslint-config-bluedrop/src/meta')
+      const { ourRuleNames, deprecatedRuleNames } = require('eslint-config-bluedrop/meta')
       ```
     children:
       - allRuleNames

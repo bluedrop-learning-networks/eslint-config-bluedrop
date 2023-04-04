@@ -24,6 +24,8 @@ module.exports = [
 
 See the [api docs](./docs/api.md) for *much more* about this.
 
+There is also a section on [migrating from an earlier version](./docs/api.md#migrating-from-an-earlier-version).
+
 ## Semantic Versioning Policy
 
 `eslint-config-bluedrop` follows [semantic versioning](https://semver.org). However, due to the nature of code quality
