@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bluedrop",
-  "version": "10.0.2",
+  "version": "10.0.2-rc.1",
   "description": "Bluedrop's ESLint configurations",
   "license": "ISC",
   "engines": {
