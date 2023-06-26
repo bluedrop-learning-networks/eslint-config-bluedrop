@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [10.0.4] - 2023-06-26
+
+### Added
+
+- node 20 support
+
 ## [10.0.0] - 2023-03-00
 ### Added
 - Support for ECMAScript [2021 - 2023]

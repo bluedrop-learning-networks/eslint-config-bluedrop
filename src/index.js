@@ -17,7 +17,6 @@ const main = {
 
 	/**
 	 * The recommended configuration stacks provided by this module.
-	 *
 	 * @name recommended
 	 * @type {Object<string, Stack>} recommended
 	 */
@@ -28,7 +27,6 @@ const main = {
 	 * ```js
 	 * const { getStack, getLayerNames } = require('eslint-config-bluedrop/src/utils')
 	 * ```
-	 *
 	 * @name utils
 	 * @type {Object<string, Function>} utils
 	 */
@@ -39,7 +37,6 @@ const main = {
 	 * ```js
 	 * const { ourRuleNames, deprecatedRuleNames } = require('eslint-config-bluedrop/src/meta')
 	 * ```
-	 *
 	 * @name meta
 	 * @type {Object<string, (Function | string[] | Object<string, RuleSet>)>}
 	 */
@@ -47,7 +44,6 @@ const main = {
 
 	/**
 	 * Stacks which duplicate the configs in eslint-config-bluedrop v8.x
-	 *
 	 * @name legacy
 	 * @type {object}
 	 */
@@ -67,7 +63,6 @@ module.exports = {version, ...main};
  * Here, these grouped _Layers_ comprise a [Stack](#stack).
  *
  * [eslint configuration object]:https://eslint.org/docs/latest/use/configure/configuration-files-new#configuration-objects
- *
  * @typedef {Object<string, Object>} Layer - an eslint ConfigObject
  */
 
@@ -82,7 +77,6 @@ module.exports = {version, ...main};
  * ```
  *
  * [eslint configuration objects]:https://eslint.org/docs/latest/use/configure/configuration-files-new#configuration-objects
- *
  * @example <caption>Here's a Stack w/ two Layers</caption>
  * const myCLIMicroConfig = [
  *    {

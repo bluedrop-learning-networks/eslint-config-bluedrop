@@ -9,7 +9,6 @@ const {getStack} = require('../utils.js');
  * From - { extends:['bluedrop/config/chai'] }
  *
  * scope: ['test/**\/*.js'],
- *
  * @type {Stack}
  */
 const chai = getStack([

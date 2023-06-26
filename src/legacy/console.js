@@ -8,7 +8,6 @@ const {getStack} = require('../utils.js');
 
 /**
  * From - { extends:['bluedrop/config/console'] }
- *
  * @type {Stack}
  */
 const console = getStack([
