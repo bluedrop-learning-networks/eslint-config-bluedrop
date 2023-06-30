@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - **node 20 support** by updating `eslint-plugin-jsdoc` to `43.2.0`.
+- publishing version `10.*.*` under tag `experimental` instead of latest.
 
 ## [10.0.0] - 2023-03-00
 ### Added
