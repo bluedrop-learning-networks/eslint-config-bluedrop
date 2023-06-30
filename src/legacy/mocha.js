@@ -9,7 +9,6 @@ const {getStack} = require('../utils.js');
  * From - { extends:['bluedrop/config/mocha'] }
  *
  * scope: ['test/**\/*.js'],
- *
  * @type {Stack}
  */
 const mocha = getStack([

@@ -7,7 +7,6 @@ const {getStack} = require('../utils.js');
 
 /**
  * From - { extends:['bluedrop/config/node'] }
- *
  * @type {Stack}
  */
 const node = getStack([

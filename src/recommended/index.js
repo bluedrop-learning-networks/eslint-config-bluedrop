@@ -3,10 +3,9 @@ const {getStack} = require('../utils.js');
 
 /**
  * The following recommended Stacks are a WIP
- *   - api
- *   - client
- *   - worker
- *
+ * - api
+ * - client
+ * - worker
  * @type {Object<string, Stack>}
  */
 

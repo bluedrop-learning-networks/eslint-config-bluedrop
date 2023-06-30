@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [10.0.3] - 2023-06-30
+
+### Added
+
+- **node 20 support** by updating `eslint-plugin-jsdoc` to `43.2.0`.
+- publishing version `10.*.*` under tag `experimental` instead of latest.
+
 ## [10.0.0] - 2023-03-00
 ### Added
 - Support for ECMAScript [2021 - 2023]

@@ -61,7 +61,7 @@ module.exports = stack // <-----------------------------------------|-- Config
 
 ### Layer
 
-[src/index.js:57-57][9]
+[src/index.js:53-53][9]
 
 > A **Layer** is equivalent to an [eslint configuration object]
 
@@ -78,7 +78,7 @@ Type: [Object][11]<[string][12], [Object][11]>
 
 ### Stack
 
-[src/index.js:57-57][13]
+[src/index.js:53-53][13]
 
 > A **Stack** is equivalent to the default export of an `esling.config.js` file
 
@@ -113,7 +113,7 @@ const myCLIMicroConfig = [
 
 ### RuleSet
 
-[src/index.js:57-57][16]
+[src/index.js:53-53][16]
 
 Type: [Object][11]<[string][12], any>
 
@@ -301,7 +301,7 @@ module.exports = [
 
 ### getStack
 
-[src/utils.js:33-60][17]
+[src/utils.js:31-58][17]
 
 A function to get a stack from a list of layer names
 
@@ -313,7 +313,7 @@ Returns **[Stack][10]** A Stack containing the requested layers
 
 ### getLayer
 
-[src/utils.js:69-72][18]
+[src/utils.js:66-69][18]
 
 Get one layer
 
@@ -325,7 +325,7 @@ Returns **[Layer][14]** The requested layer
 
 ### getLayerNames
 
-[src/utils.js:18-24][19]
+[src/utils.js:17-23][19]
 
 Get all of the available layer names
 
@@ -346,7 +346,7 @@ const { ourRuleNames, deprecatedRuleNames } = require('eslint-config-bluedrop/me
 
 ### allRuleNames
 
-[src/meta.js:30-41][20]
+[src/meta.js:29-40][20]
 
 The names for all of the rules, used and unused
 
@@ -360,7 +360,7 @@ console.log(allRulenames())
 
 ### ourRuleNames
 
-[src/meta.js:51-60][21]
+[src/meta.js:49-58][21]
 
 The names for all rules set/unset by this module
 
@@ -374,7 +374,7 @@ console.log(ourRulenames())
 
 ### rulesByLayer
 
-[src/meta.js:70-84][22]
+[src/meta.js:67-81][22]
 
 The rulesets for all layers, indexed by layer name
 
@@ -388,7 +388,7 @@ console.dir(rulesByLayer())
 
 ### deprecatedRuleNames
 
-[src/meta.js:94-96][24]
+[src/meta.js:90-92][24]
 
 The names of deprecated rules
 
@@ -402,7 +402,7 @@ console.log(deprecatedRuleNames())
 
 ### unusedRuleNames
 
-[src/meta.js:106-108][25]
+[src/meta.js:101-103][25]
 
 The names of unused rules
 
@@ -416,7 +416,7 @@ console.log(unusedRuleNames())
 
 ### overlappingLayerRules
 
-[src/meta.js:131-187][26]
+[src/meta.js:125-181][26]
 
 A function for detecting rule overlap between layers
 
@@ -443,7 +443,7 @@ console.dir(overlappingLayerRules(getLayerNames))
 
 ### identicalLayerRules
 
-[src/meta.js:201-211][27]
+[src/meta.js:194-204][27]
 
 A function for detecting identical rules among layers
 
@@ -479,7 +479,7 @@ Type: [object][11]
 
 ### recommended
 
-[src/index.js:24-24][30]
+[src/index.js:23-23][30]
 
 The recommended configuration stacks provided by this module.
 
@@ -487,7 +487,7 @@ Type: [Object][11]<[string][12], [Stack][10]>
 
 ### legacy
 
-[src/index.js:54-54][31]
+[src/index.js:50-50][31]
 
 Stacks which duplicate the configs in eslint-config-bluedrop v8.x
 
@@ -495,7 +495,7 @@ Type: [object][11]
 
 ### utils
 
-[src/index.js:35-35][32]
+[src/index.js:33-33][32]
 
 Utils for working with eslint configs
 
@@ -519,7 +519,7 @@ Type: [object][11]
 
 ### meta
 
-[src/index.js:46-46][34]
+[src/index.js:43-43][34]
 
 Metadata about the eslint configuration.
 
@@ -561,7 +561,7 @@ Type: [object][11]
 
 [8]: #exports
 
-[9]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L59-L72 "Source code on GitHub"
+[9]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/index.js#L55-L67 "Source code on GitHub"
 
 [10]: #stack
 
@@ -569,48 +569,48 @@ Type: [object][11]
 
 [12]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
 
-[13]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L74-L98 "Source code on GitHub"
+[13]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/index.js#L69-L92 "Source code on GitHub"
 
 [14]: #layer
 
 [15]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array
 
-[16]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L100-L102 "Source code on GitHub"
+[16]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/index.js#L94-L96 "Source code on GitHub"
 
-[17]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/utils.js#L33-L60 "Source code on GitHub"
+[17]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/utils.js#L31-L58 "Source code on GitHub"
 
-[18]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/utils.js#L69-L72 "Source code on GitHub"
+[18]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/utils.js#L66-L69 "Source code on GitHub"
 
-[19]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/utils.js#L18-L24 "Source code on GitHub"
+[19]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/utils.js#L17-L23 "Source code on GitHub"
 
-[20]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L30-L41 "Source code on GitHub"
+[20]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/meta.js#L29-L40 "Source code on GitHub"
 
-[21]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L51-L60 "Source code on GitHub"
+[21]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/meta.js#L49-L58 "Source code on GitHub"
 
-[22]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L70-L84 "Source code on GitHub"
+[22]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/meta.js#L67-L81 "Source code on GitHub"
 
 [23]: #ruleset
 
-[24]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L94-L96 "Source code on GitHub"
+[24]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/meta.js#L90-L92 "Source code on GitHub"
 
-[25]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L106-L108 "Source code on GitHub"
+[25]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/meta.js#L101-L103 "Source code on GitHub"
 
-[26]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L131-L187 "Source code on GitHub"
+[26]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/meta.js#L125-L181 "Source code on GitHub"
 
-[27]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L201-L211 "Source code on GitHub"
+[27]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/meta.js#L194-L204 "Source code on GitHub"
 
-[28]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L10-L10 "Source code on GitHub"
+[28]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/index.js#L10-L10 "Source code on GitHub"
 
 [29]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function
 
-[30]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L24-L24 "Source code on GitHub"
+[30]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/index.js#L23-L23 "Source code on GitHub"
 
-[31]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L54-L54 "Source code on GitHub"
+[31]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/index.js#L50-L50 "Source code on GitHub"
 
-[32]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L35-L35 "Source code on GitHub"
+[32]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/index.js#L33-L33 "Source code on GitHub"
 
-[33]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/utils.js#L9-L9 "Source code on GitHub"
+[33]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/utils.js#L9-L9 "Source code on GitHub"
 
-[34]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/index.js#L46-L46 "Source code on GitHub"
+[34]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/index.js#L43-L43 "Source code on GitHub"
 
-[35]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/aa81417108adf9a3bfaca0ddd933d1b1ef9d19bb/src/meta.js#L13-L13 "Source code on GitHub"
+[35]: https://github.com/bluedrop-learning-networks/eslint-config-bluedrop/blob/fbc0fdcc77a6c01af6cf30cfed0efece4d5c2964/src/meta.js#L13-L13 "Source code on GitHub"

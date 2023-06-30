@@ -1,6 +1,9 @@
 name: Test
 
-on: [push]
+on: 
+  workflow_dispatch:
+  workflow_call:
+  push:
 
 jobs:
   tests:
@@ -8,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ '18' ]
+        node: [ '18', '20' ]
     steps:
       - uses: actions/checkout@v3
       - name: Setup node

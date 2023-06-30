@@ -11,7 +11,6 @@ const {resolve} = require('node:path');
 
 /**
  * Get all of the available layer names
- *
  * @function getLayerNames
  * @returns {string[]} A Stack containing the requested layers
  */
@@ -25,7 +24,6 @@ const getLayerNames = () => [
 
 /**
  * A function to get a stack from a list of layer names
- *
  * @function getStack
  * @param {string[]} list - A list of layers to stack
  * @returns {Stack} A Stack containing the requested layers
@@ -61,7 +59,6 @@ const getStack = list => {
 
 /**
  * Get one layer
- *
  * @function getLayer
  * @param {string} name - The name of the layer to get
  * @returns {Layer} The requested layer

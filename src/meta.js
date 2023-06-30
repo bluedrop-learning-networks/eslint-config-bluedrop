@@ -21,7 +21,6 @@ const allLayers = getStack(layerNames);
 module.exports = {
 	/**
 	 * The names for all of the rules, used and unused
-	 *
 	 * @example
 	 * console.log(allRulenames())
 	 * @type {string[]}
@@ -42,7 +41,6 @@ module.exports = {
 
 	/**
 	 * The names for all rules set/unset by this module
-	 *
 	 * @example
 	 * console.log(ourRulenames())
 	 * @type {string[]}
@@ -61,7 +59,6 @@ module.exports = {
 
 	/**
 	 * The rulesets for all layers, indexed by layer name
-	 *
 	 * @example
 	 * console.dir(rulesByLayer())
 	 * @type {Object<string, RuleSet>}
@@ -85,7 +82,6 @@ module.exports = {
 
 	/**
 	 * The names of deprecated rules
-	 *
 	 * @example
 	 * console.log(deprecatedRuleNames())
 	 * @type {string[]}
@@ -97,7 +93,6 @@ module.exports = {
 
 	/**
 	 * The names of unused rules
-	 *
 	 * @example
 	 * console.log(unusedRuleNames())
 	 * @type {string[]}
@@ -109,7 +104,6 @@ module.exports = {
 
 	/**
 	 * A function for detecting rule overlap between layers
-	 *
 	 * @example
 	 * const { utils: { getLayerNames }, meta:{ overlappingLayerRules }} = require('eslint-config-bluedrop')
 	 * // using a util to get all of the layer names
@@ -187,7 +181,6 @@ module.exports = {
 	},
 	/**
 	 * A function for detecting identical rules among layers
-	 *
 	 * @example
 	 * const report = identicalLayerRules([
 	 *   './legacy/common-base',

@@ -15,7 +15,6 @@ const {getStack} = require('../utils.js');
 	 * - [plugin-security](https://github.com/eslint-community/eslint-plugin-security#rules)
 	 * - [plugin-unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn#recommended-config)
 	 * - [bluedrop-library](./src/recommends/bluedrop-library.js)
-	 *
 	 * @type {Stack}
 	 */
 const library = getStack([
