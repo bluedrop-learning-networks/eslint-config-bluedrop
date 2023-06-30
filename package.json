@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-bluedrop",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "description": "Bluedrop's ESLint configurations",
   "main": "config/common.js",
   "bin": {
@@ -29,7 +29,8 @@
   "author": "Tim Oram <timoram@bluedrop.com>",
   "contributors": [
     "Tim Oram <timoram@bluedrop.com>",
-    "David Valentiate <me@davidv.ca>"
+    "David Valentiate <me@davidv.ca>",
+    "Serhii Buinytskyi <serhiibuinytskyi@bluedrop.com>"
   ],
   "license": "ISC",
   "bugs": {
