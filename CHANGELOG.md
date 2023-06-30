@@ -4,6 +4,11 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [9.0.1] - 2023-06-30
+
+Technical release which is required to overwrite the contents of the tag `latest`.
+There is nothing changed at all, just version bump.
+
 ## [9.0.0] - 2020-06-19
 ### Added
 - Support for ECMAScript 2020 (11)
