@@ -10,7 +10,7 @@ This package provides Bluedrop's ESLint configuration as an extensible shared se
 
 ### General Setup
 
-1. `npm install --save-dev eslint-config-bluedrop@next`
+1. `npm install --save-dev eslint-config-bluedrop@experimental`
 
 ### Basic Usage (New Projects)
 
