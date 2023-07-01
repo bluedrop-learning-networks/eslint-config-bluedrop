@@ -4,7 +4,6 @@
 
 module.exports = {
 	rules: {
-		'jsx-a11y/accessible-emoji': 'error',
 		'jsx-a11y/alt-text': 'error',
 		'jsx-a11y/anchor-has-content': 'error',
 		'jsx-a11y/anchor-is-valid': 'error',
@@ -80,7 +79,6 @@ module.exports = {
 		],
 		'jsx-a11y/no-noninteractive-element-to-interactive-role': 'error',
 		'jsx-a11y/no-noninteractive-tabindex': 'error',
-		'jsx-a11y/no-onchange': 'error',
 		'jsx-a11y/no-redundant-roles': 'error',
 		'jsx-a11y/no-static-element-interactions': 'error',
 		'jsx-a11y/role-has-required-aria-props': 'error',
