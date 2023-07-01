@@ -12,8 +12,8 @@
     "rules/"
   ],
   "engines": {
-    "node": "~20.3.0",
-    "npm": "~9.6.0"
+    "node": ">=16",
+    "npm": ">=8"
   },
   "publishConfig": {
     "tag": "alpha"
