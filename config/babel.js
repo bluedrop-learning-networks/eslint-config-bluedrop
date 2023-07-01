@@ -1,10 +1,10 @@
 'use strict';
 
 module.exports = {
-	plugins: [
-		'babel',
-	],
-	parser: 'babel-eslint',
+	parserOptions: {
+		parser: '@babel/eslint-parser',
+		requireConfigFile: false,
+	},
 	extends: [
 		'../rules/plugin-babel',
 	].map(require.resolve),
