@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [9.1.0] - 2023-07-04
+
+Got rid of deprecated rules
+
+### Removed
+
+- [`jsx-a11y/accessible-emoji`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/accessible-emoji.md).
+- [`jsx-a11y/no-onchange`](https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/main/docs/rules/no-onchange.md).
+
+### Changed
+
+- [`react/jsx-sort-default-props`](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-default-props.md) replaced by [`react/sort-default-props`](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/sort-default-props.md).
+
 ## [9.0.1] - 2023-06-30
 
 Technical release which is required to overwrite the contents of the tag `latest`.
